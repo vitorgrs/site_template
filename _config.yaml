@@ -35,6 +35,8 @@ defaults:
     values:
       layout: post
 
+
+
 collections:
   # generate page for each member
   members:

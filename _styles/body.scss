@@ -1,7 +1,7 @@
 ---
 ---
 
-body {
+.body-default {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -12,4 +12,7 @@ body {
   font-family: var(--body);
   text-align: center;
   line-height: var(--compact);
+}
+.body-manager{
+  
 }

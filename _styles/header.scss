@@ -93,7 +93,7 @@ header a {
   content: "\f00d";
 }
 
-nav {
+.nav-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,11 +103,11 @@ nav {
   text-transform: uppercase;
 }
 
-nav > a {
+.nav-header  > a {
   padding: 5px;
 }
 
-nav > a:hover {
+.nav-header  > a:hover {
   color: var(--primary);
 }
 
@@ -123,7 +123,7 @@ header:not([data-big]) {
       display: none;
     }
 
-    nav {
+    .nav-header  {
       align-items: flex-end;
       flex-direction: column;
       width: 100%;
