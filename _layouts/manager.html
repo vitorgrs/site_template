@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  {% include head.html %}
+  
+  <body class=body-manager>
+    
+      <!-- Sidebar -->
+      <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <div class="title">
+            <h3 class="title-manager">Administrador</h3>
+            <button id="sidebarCollapse" class="btn btn-toggle">
+              &#9776; <!-- Ícone de "hamburger" -->
+            </button>
+          </div>
+          <p>lorem ipsum</p>
+        </div>
+        <ul class="list-unstyled components">
+          <li>
+            <a href="#home">
+              <!-- Ícone SVG para Home -->
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2L2 10h2v8h4V12h4v6h4V10h2L10 2z"/>
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <!-- Ícone SVG para Projects -->
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8S14.42 2 10 2z"/>
+              </svg>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#members">
+              <!-- Ícone SVG para Members -->
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              </svg>
+              <span>Members</span>
+            </a>
+          </li>
+          <!-- Adicione mais itens aqui -->
+        </ul>
+      </nav>
+
+      <!-- Conteúdo Principal -->
+      <div id="content">
+
+        <main class="main-manager">
+          
+          {{ content }} <!-- Aqui entra o conteúdo da página -->
+        </main>
+
+      </div>
+    
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const sidebarToggle = document.getElementById("sidebarCollapse");
+          const sidebar = document.getElementById("sidebar");
+          const content = document.getElementById("content");
+          const sidebarTitle = document.querySelector(".sidebar-title"); // Seleciona o título
+  
+          if (sidebarToggle && sidebar && content) {
+            sidebarToggle.onclick = function() {
+              sidebar.classList.toggle("collapsed");
+              content.classList.toggle("expanded");
+  
+              // Alterna a visibilidade do título
+              if (sidebarTitle) {
+                sidebarTitle.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
+              }
+            };
+          }
+        });
+      </script>
+  </body>
+</html>
