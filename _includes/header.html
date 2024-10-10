@@ -40,7 +40,7 @@
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
-  <nav>
+  <nav class="nav-header ">
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
