@@ -1,5 +1,6 @@
 ---
 ---
 
-# Form Noticias
-Teste do form noticias
+# Formulário de Noticias
+
+{% include formNoticias.html%}
