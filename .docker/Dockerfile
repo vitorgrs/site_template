@@ -30,5 +30,7 @@ EXPOSE 35729
 # run jekyll and cite process
 COPY .docker/entrypoint.sh /var/
 RUN chmod -R 777 /usr/src/app
+RUN ls -l /var/entrypoint.sh
 RUN chmod +x /var/entrypoint.sh
+RUN ls -l /var/entrypoint.sh
 CMD ["/var/entrypoint.sh"]
