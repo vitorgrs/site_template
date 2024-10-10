@@ -1,0 +1,39 @@
+---
+---
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+   
+    box-sizing: border-box;
+
+}
+
+input{
+    font: 1em sans-serif;
+    box-sizing: border-box;
+    border: 1px solid black;
+   
+}
+
+#form_fields{
+    display: table;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.labelName{
+    display: flex;
+    flex-direction: row;
+}
+
+#grupo{
+    padding: 11px;
+    border: solid 1px var(--light-gray);
+    border-radius: var(--rounded);
+    background: var(--background);
+    box-shadow: var(--shadow);
+}

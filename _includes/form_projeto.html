@@ -1,0 +1,19 @@
+<form action="" method="post">
+
+    <div id="form_fields">
+        <label for="titulo" class="labelName">Título </label>
+        <input type="text" name="proj_titulo" id="titulo" required placeholder="Insira seu título aqui" />
+        
+        <label for="subtitulo" class="labelName">Subtítulo </label>
+        <input type="text" name="proj_subtitulo" id="subtitulo" required placeholder="Insira seu subtítulo aqui"/>
+
+        <label for="grupo_projeto" class="labelName">Grupo</label>
+        <input list="grupos" id="grupo" name="grupo_projeto" required placeholder="Selecione seu grupo">
+
+    </div>
+
+    <datalist id="grupos">
+        <option value="NCA"></option>
+        <option value="Equatorial"></option>
+    </datalist>
+</form>
