@@ -5,53 +5,71 @@
   
   <body class=body-manager>
     
-      <!-- Sidebar -->
       <nav id="sidebar" class="sidebar">
         <div class="sidebar-header">
           <div class="title">
-            <h3 class="title-manager">Administrador</h3>
-            <button id="sidebarCollapse" class="btn btn-toggle">
-              &#9776; <!-- Ícone de "hamburger" -->
+            <h3 class="sidebar-title">Administrador</h3>
+            <button id="sidebarCollapse" class="button-sidebar">
+              <i class="fa-solid fa-bars"></i>
             </button>
           </div>
-          <p>lorem ipsum</p>
+          <p class="sidebar-email">lorem ipsum</p>
         </div>
         <ul class="list-unstyled components">
           <li>
-            <a href="#home">
-              <!-- Ícone SVG para Home -->
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 2L2 10h2v8h4V12h4v6h4V10h2L10 2z"/>
-              </svg>
+            <a href="/manager">
+              <i class="fa-solid fa-house"></i>
               <span>Home</span>
             </a>
           </li>
           <li>
-            <a href="#projects">
-              <!-- Ícone SVG para Projects -->
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8S14.42 2 10 2z"/>
-              </svg>
-              <span>Projects</span>
+            <a href="/manager/membros">
+              <i class="fa-solid fa-users"></i>
+              <span>Membros</span>
             </a>
           </li>
           <li>
-            <a href="#members">
-              <!-- Ícone SVG para Members -->
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              </svg>
-              <span>Members</span>
+            <a href="/manager/projetos">
+              <i class="fas fa-home"></i>
+              <span>Projetos</span>
             </a>
           </li>
-          <!-- Adicione mais itens aqui -->
+          <li>
+            <a href="/manager/noticias">
+              <i class="fa-solid fa-gear"></i>
+              <span>Notícias</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manager/publicacoes">
+              <i class="fa-solid fa-address-card"></i>
+              <span>Publicações</span>
+            </a>
+          </li>
+          <li>
+            <a href="/manager/config">
+              <i class="fa-solid fa-gear"></i>
+              <span>Configurações</span>
+            </a>
+          </li>
         </ul>
-      </nav>
+      
+      <div class="sidebar-footer">
+        <a class="title" href="/"">
+          <button class="button-logout">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </button>
+          <h3 class="sidebar-logout">Sair</h3>
+  
+        </a>
+        
+      </div>
+    </nav>
 
-      <!-- Conteúdo Principal -->
-      <div id="content">
 
-        <main class="main-manager">
+      <div id="content" class="content">
+
+        <main id="main-manager" class="main-manager">
           
           {{ content }} <!-- Aqui entra o conteúdo da página -->
         </main>
@@ -63,17 +81,20 @@
         document.addEventListener("DOMContentLoaded", function() {
           const sidebarToggle = document.getElementById("sidebarCollapse");
           const sidebar = document.getElementById("sidebar");
-          const content = document.getElementById("content");
-          const sidebarTitle = document.querySelector(".sidebar-title"); // Seleciona o título
+          const content = document.getElementById("main-manager");
+          const sidebarTitle = document.querySelector(".sidebar-title");
+          const sidebarEmail = document.querySelector(".sidebar-email");
+          const sidebarLogout = document.querySelector(".sidebar-logout");
   
           if (sidebarToggle && sidebar && content) {
             sidebarToggle.onclick = function() {
               sidebar.classList.toggle("collapsed");
               content.classList.toggle("expanded");
   
-              // Alterna a visibilidade do título
               if (sidebarTitle) {
                 sidebarTitle.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
+                sidebarEmail.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
+                sidebarLogout.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
               }
             };
           }
