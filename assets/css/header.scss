@@ -1,168 +1,132 @@
 ---
 ---
 
-$logo-big: 80px;
-$logo: 40px;
-$big-padding: 100px;
-$collapse: 700px;
-$sticky: true;
+$logo-big: 80px; // Define a altura do logotipo grande (80px).
+$logo: 40px; // Define a altura do logotipo padrão (40px).
+$big-padding: 100px; // Define um espaçamento grande para padding (100px).
+$collapse: 700px; // Define o ponto de colapso (700px) para a responsividade.
+$sticky: true; // Define se o cabeçalho será fixo ou não.
 
+// Estilo do header
 header {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+  display: flex; // O header será um contêiner flexível.
+  flex-direction: row; // Os itens dentro do header serão exibidos em linha.
+  background-color: white; // A cor de fundo do header será branca.
+  justify-content: space-between; // Espaçamento igual entre os itens do header.
+  align-items: center; // Os itens serão centralizados verticalmente.
+  padding: 20px 50px; // Adiciona um espaçamento interno de 20px ao redor do header.
 
   @if $sticky {
-    position: sticky !important;
-    top: 0;
-    z-index: 10 !important;
+    position: sticky !important; // Se $sticky for true, o header será fixo (pegajoso).
+    top: 0; // Fixa o header no topo da página.
+    z-index: 10 !important; // Dá uma prioridade alta na sobreposição de camadas.
   }
 }
 
+// Estilo dos links dentro do header
 header a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 24px;
+  color: #000000; // A cor dos links será preta.
+  text-decoration: none; // Remove sublinhados dos links.
+  font-size: 24px; // O tamanho da fonte dos links será 24px.
 }
 
+// Estilo para a classe .home (logotipo e título)
 .home {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
+  display: flex; // O contêiner .home será flexível.
+  justify-content: flex-start; // Alinha o conteúdo à esquerda.
+  align-items: center; // Alinha verticalmente ao centro.
 }
 
+// Estilo da classe .logo
 .logo {
-  height: $logo;
+  box-sizing: border-box;
+  object-fit: contain;// // Define a altura da .logo usando a variável $logo (40px).
 }
 
-.logo > * {
-  height: 100%;
-}
-
-
-.nav-toggle {
-  display: none;
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 0;
-  color: var(--text);
-  appearance: none;
-  transition: background var(--transition);
-}
-
-.nav-toggle:after {
-  content: "\f0c9";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  color: var(--text);
-  font-size: 15px;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  transform: translate(-50%, -50%);
-}
-
-.nav-toggle:checked:after {
-  content: "\f00d";
-}
-
+// Estilo do menu de navegação (links)
 .nav-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-family: var(--heading);
-  text-transform: uppercase;
+  display: flex; // O contêiner .nav-header será flexível.
+  justify-content: center; // Alinha o conteúdo no centro.
+  align-items: center; // Alinha verticalmente os itens no centro.
+  flex-wrap: wrap; // Permite que os itens dentro do .nav-header quebrem para novas linhas se necessário.
+  gap: 10px; // Define um espaçamento de 10px entre os itens.
+  font-family: var(--heading); // Define a fonte como --heading (uma variável global).
+  text-transform: uppercase; // Torna o texto dos links em letras maiúsculas.
 }
 
-.nav-header  > a {
-  padding: 5px;
+// Estilo dos links dentro do .nav-header
+.nav-header > a {
+  padding: 5px; // Adiciona um espaçamento de 5px ao redor de cada link.
 }
 
-.nav-header  > a:hover {
-  color: var(--primary);
+.nav-header > a:hover {
+  color: var(--primary); // Muda a cor do texto ao passar o mouse (hover) para a cor primária definida.
 }
 
-.login{
-  background-color: #9747FF;
-  border-radius:10px ;
-  padding:10px 30px;
-  font-size: 24px;
-  color: white;
+// Estilo do botão de login
+.login {
+  background-color: #9747FF; // Define a cor de fundo roxa (#9747FF).
+  border-radius: 10px; // Adiciona cantos arredondados com raio de 10px.
+  padding: 10px 30px; // Define o espaçamento interno (padding) como 10px de altura e 30px de largura.
+  font-size: 24px; // Tamanho da fonte do botão de login será 24px.
+  color: white; 
 }
+
+// Estilo do seletor de idiomas
 .language-selector {
+  position: relative;
+  display: flex;
+  gap:20px;
   border: 2px solid #9747FF;
   border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 24px;
-  background-color: white;
-  color: #000000;
-}
-.language-selector:focus {
-  outline: none;
-  border-color: #7A32CC;
+  padding: 10px;
+  cursor: pointer;
 }
 
-
-header:not([data-big]) {
-  @media (max-width: $collapse) {
-    justify-content: flex-end;
-
-    .nav-toggle {
-      display: flex;
-    }
-
-    .nav-toggle:not(:checked) + nav {
-      display: none;
-    }
-
-    .nav-header  {
-      align-items: flex-end;
-      flex-direction: column;
-      width: 100%;
-    }
-  }
-}
-
-header[data-big] {
-  justify-content: center;
+.selected-language {
+  display: flex;
   align-items: center;
-  padding: 20px 50px;
-
-  @if $sticky {
-    top: unset;
-  }
-
-  .home {
-    flex-direction: column;
-    flex-grow: 0;
-  }
-
-  .logo {
-    height: $logo-big;
-  }
-
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-size: var(--xxl);
-  }
-
-  .subtitle {
-    font-size: var(--large);
-  }
+  justify-content: space-between;
 }
+
+.selected-language img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.selected-language .arrow-down {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.language-options li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.language-options li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.language-options li:hover {
+  background-color: #f0f0f0;
+}
+

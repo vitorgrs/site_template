@@ -6,6 +6,11 @@
 {% assign jpg = "assets/images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: jpg | default: nil %}
 
+{% assign bandeiraBrasil = "assets/images/bandeiraBrasil.svg" | file_exists %}
+{% assign bandeiraEUA = "assets/images/bandeiraEUA.svg" | file_exists %}
+
+
+
 <header
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
@@ -26,8 +31,6 @@
     {% endif %}
   </a>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
   <nav class="nav-header ">
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
@@ -37,7 +40,6 @@
       {% if page.nav %}
         <a
           href="{{ page.dir | relative_url }}"
-          data-tooltip="{{ page.nav.tooltip }}"
         >
           {{ page.title }}
         </a>
@@ -45,15 +47,48 @@
     {% endfor %}
   </nav>
 
-  <a href="{{ "/manager" | relative_url }}">
-    <span class="login">
-      Log in
-    </span>
-  </a>
+  
 
-  <select class="language-selector" >
-    <option>EN</option>
-    <option>PT</option>
-  </select>
+  <div class="language-selector">
+    <div class="selected-language">
+      <img src="{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
+      <span>PT</span>
+      <span class="arrow-down">&#9662;</span> <!-- Adiciona a seta aqui -->
+    </div>
+    <ul class="language-options">
+      <li data-lang="pt">
+        <img src="{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
+        <span>PT</span>
+      </li>
+      <li data-lang="en">
+        <img src="{{ bandeiraEUA | relative_url }}" alt="Bandeira dos EUA">
+        <span>EN</span>
+      </li>
+    </ul>
+  </div>
+  
 </header>
+<script>
+  document.querySelector('.selected-language').addEventListener('click', function() {
+  const options = document.querySelector('.language-options');
+  options.style.display = options.style.display === 'none' || !options.style.display ? 'block' : 'none';
+});
 
+document.querySelectorAll('.language-options li').forEach(function(option) {
+  option.addEventListener('click', function() {
+    const selectedLang = document.querySelector('.selected-language');
+    const img = option.querySelector('img').src;
+    const lang = option.querySelector('span').innerText;
+
+    selectedLang.querySelector('img').src = img;
+    selectedLang.querySelector('span').innerText = lang;
+
+    document.querySelector('.language-options').style.display = 'none';
+
+    // Aqui você pode adicionar lógica para mudar o idioma da página
+    const selectedLangCode = option.getAttribute('data-lang');
+    console.log("Idioma selecionado:", selectedLangCode);
+  });
+});
+
+</script>
