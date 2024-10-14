@@ -1,6 +1,10 @@
 ---
 ---
 
+section#cadastre-um-novo-projeto {
+    margin-top: -2rem;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -40,7 +44,7 @@ textarea{
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 0.2em;
-    max-width: 250px;
+    max-width: 280px;
 } 
 
 .chip { 
@@ -92,13 +96,15 @@ textarea{
     
 }
 
-#grupo{
+#grupo, textarea{
     padding: 11px;
     border: solid 1px var(--light-gray);
     border-radius: var(--rounded);
     background: var(--background);
     box-shadow: var(--shadow);
 }
+
+
 
 #filefoto{
     border: none;
