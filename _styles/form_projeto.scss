@@ -6,7 +6,7 @@ form {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    //border: 1px solid black;
     gap: 10px;
     width: auto;
     box-sizing: border-box;
@@ -16,8 +16,6 @@ form {
 input{
     font: 1em sans-serif;
     box-sizing: border-box;
-    border: 1px solid black;
-   
 }
 
 textarea{
@@ -34,6 +32,37 @@ textarea{
     background-color: #7A5CFA;
     color: white;
 }
+
+
+
+.chip-container { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.2em;
+    max-width: 250px;
+} 
+
+.chip { 
+    display: flex; 
+    align-items: center; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    gap: 5px; 
+    margin-top: 5px;
+} 
+  
+.chipText{
+    margin-left: 10px;
+}
+  
+.close-icon { 
+    cursor: pointer; 
+    margin: 0px 8px; 
+    font-weight: bold; 
+    color: red; 
+} 
 
 .cancelarButton{
     color:#7A5CFA;
