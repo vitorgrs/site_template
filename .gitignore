@@ -3,6 +3,7 @@
 vendor
 debug.log
 __pycache__
+_site
 .cache
 !cache.db
 .DS_STORE
