@@ -24,6 +24,28 @@ textarea{
     font: 1em sans-serif
 }
 
+.buttonRow{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.enviarButton{
+    background-color: #7A5CFA;
+    color: white;
+}
+
+.cancelarButton{
+    color:#7A5CFA;
+    background-color: #ffffff;
+    border: solid #7A5CFA 1px;
+}
+.buttonRow > button{
+    padding: 1rem;
+    text-align: center;
+    width: 40%;
+
+}
 #form_fields{
     display: flex;
     flex-direction: column;
