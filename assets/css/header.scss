@@ -9,12 +9,12 @@ $sticky: true;
 
 header {
   display: flex;
+  flex-direction: row;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  box-shadow: var(--shadow);
 
   @if $sticky {
     position: sticky !important;
@@ -24,8 +24,9 @@ header {
 }
 
 header a {
-  color: var(--text);
+  color: #000000;
   text-decoration: none;
+  font-size: 24px;
 }
 
 .home {
@@ -46,25 +47,6 @@ header a {
   height: 100%;
 }
 
-.title-text {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 5px;
-  min-width: 0;
-  font-family: var(--title);
-  text-align: left;
-}
-
-.title {
-  font-size: var(--large);
-}
-
-.subtitle {
-  opacity: 0.65;
-  font-weight: var(--thin);
-}
 
 .nav-toggle {
   display: none;
@@ -111,6 +93,27 @@ header a {
   color: var(--primary);
 }
 
+.login{
+  background-color: #9747FF;
+  border-radius:10px ;
+  padding:10px 30px;
+  font-size: 24px;
+  color: white;
+}
+.language-selector {
+  border: 2px solid #9747FF;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: white;
+  color: #000000;
+}
+.language-selector:focus {
+  outline: none;
+  border-color: #7A32CC;
+}
+
+
 header:not([data-big]) {
   @media (max-width: $collapse) {
     justify-content: flex-end;
@@ -134,8 +137,7 @@ header:not([data-big]) {
 header[data-big] {
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: $big-padding 20px;
+  padding: 20px 50px;
 
   @if $sticky {
     top: unset;
