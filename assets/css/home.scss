@@ -1,0 +1,61 @@
+---
+---
+/* Primeira seção com imagem e texto */
+.conhecaMais {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding: 50px;
+}
+
+.text-block {
+  max-width: 50%;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Carrossel */
+.carouselNoticias {
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.carousel-content {
+  max-width: 50%;
+}
+
+.carousel img {
+  max-width: 50%;
+}
+
+/* Seção de cards */
+.projetos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  text-align: center;
+  max-width: 30%;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
