@@ -4,7 +4,7 @@
 defaults:
   # all markdown files
   - scope:
-      path: "pages"
+      path: ""
     values:
       layout: default
   # markdown files in /_members
@@ -41,6 +41,9 @@ highlighter: rouge
 
 # jekyll theme
 theme: null
+
+sass:
+  sass_dir: assets/css
 
 # force jekyll to include certain files/folders
 include:
