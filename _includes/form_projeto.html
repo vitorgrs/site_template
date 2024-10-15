@@ -9,7 +9,7 @@
 
 <h1 class="tituloForm">Cadastre um novo projeto</h1>
 
-<form action="" method="post">
+<form action="http://localhost:3000/submit" method="POST" id="form_projeto">
 
     <div id="form_fields">
         <label for="titulo" class="labelName">Título </label>
@@ -84,4 +84,8 @@
             }
         }
     })
+
+    const form = document.querySelector("#form_projeto");
+
+
 </script>
