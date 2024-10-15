@@ -1,0 +1,118 @@
+---
+---
+
+.body-manager {
+  font-family: Arial, sans-serif; 
+  display: flex;   
+  background-color: #000;
+  margin: 0;              
+  height: 100vh; 
+}
+
+.sidebar {
+  min-width: 250px;            
+  background-color: #000;             
+  color: #fff;                  
+  transition: width 0.3s;        
+  display: flex;
+  padding: 20px;
+  margin: 0;
+  flex-direction: column;         
+}
+.sidebar .title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap:20px;
+}
+.button-sidebar{
+  background: none !important;     
+  border: none;         
+  padding: 0;          
+  margin: 0;         
+  cursor: pointer;      
+  outline: none;  
+}
+.button-logout {
+  background: none !important;     
+  border: none;      
+  padding: 0;           
+  margin: 0;            
+  cursor: pointer;     
+  outline: none;        
+}
+.button-sidebar i {
+  font-size: 30px; 
+  padding:  0 10px;    
+  color: #ffffff;          
+}
+.button-logout i {
+  font-size: 24px;   
+  padding: 10px;    
+  color: red;     
+}
+
+#sidebarCollapse{
+  height: 25px;
+}
+
+.sidebar .components {
+  padding: 0;                  
+  margin: 0;                     
+  list-style: none;            
+}
+
+.sidebar .components li {
+  margin: 10px 0;                
+}
+
+.sidebar .components a {
+  color: #fff;                  
+  text-decoration: none;         
+  display: block;       
+  font-size: 24px;       
+  padding: 10px;              
+}
+
+.sidebar .components a:hover {
+  background: rgba(255, 255, 255, 0.1); 
+}
+
+#content {
+  flex-grow: 1;                
+  transition: margin-left 0.3s;  
+}
+
+.sidebar.collapsed {
+  max-width: 80px !important;   
+  min-width: 80px;            
+}
+#sidebar.collapsed .components a {
+  justify-content: center; 
+}
+
+
+#sidebar.collapsed .components a span {
+  display: none; 
+}
+#main-manager.expanded {
+  margin: 2.5vh 2.5vh 2.5vh 0 !important;           
+}
+
+.main-manager {
+  background-color: white;            
+  border-radius: 20px;            
+  padding: 20px;
+  margin:  2.5vh 2.5vh 2.5vh 0;      
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  height: 95vh;
+
+}
+
+.sidebar-title {
+  margin: 0;
+  transition: display 0.3s ease; 
+}
+
+
