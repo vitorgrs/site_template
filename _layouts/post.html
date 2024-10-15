@@ -2,7 +2,6 @@
 layout: default
 ---
 
-{% include section.html background=page.image %}
 
 <h1 class="center">{{ page.title }}</h1>
 
@@ -15,10 +14,7 @@ layout: default
   tags=page.tags
 %}
 
-{% include section.html %}
 
 {{ content }}
-
-{% include section.html %}
 
 {% include post-nav.html post=page %}

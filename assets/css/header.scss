@@ -27,7 +27,7 @@ header {
 header a {
   color: #000000; // A cor dos links será preta.
   text-decoration: none; // Remove sublinhados dos links.
-  font-size: 24px; // O tamanho da fonte dos links será 24px.
+  font-size: 0.8rem; // O tamanho da fonte dos links será 24px.
 }
 
 // Estilo para a classe .home (logotipo e título)
@@ -39,8 +39,7 @@ header a {
 
 // Estilo da classe .logo
 .logo {
-  box-sizing: border-box;
-  object-fit: contain;// // Define a altura da .logo usando a variável $logo (40px).
+  width: 6rem;
 }
 
 // Estilo do menu de navegação (links)
