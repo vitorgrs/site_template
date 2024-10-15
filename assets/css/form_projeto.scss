@@ -87,7 +87,7 @@ textarea{
     flex-direction: column;
     padding-top: 1em;
     padding-bottom: 1em;
-    width: 100%;
+    width: 80%;
 }
 
 #form_fields > label {
@@ -100,6 +100,9 @@ textarea{
     
 }
 
+.tituloForm{
+    text-align: center;
+}
 
 #grupo, textarea{
     padding: 11px;
