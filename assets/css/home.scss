@@ -1,13 +1,32 @@
 ---
 ---
 /* Primeira seção com imagem e texto */
+.sectionConhecaMais {
+  position: relative;
+  padding: 50px 10%;
+  overflow: hidden; /* Para garantir que o triângulo não saia da seção */
+}
+
+.sectionConhecaMais::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #895F9C; /* Cor do triângulo */
+  clip-path: polygon(100% 100%, 0 100%, 100% 75%);
+  z-index: -1;
+}
+
 .conhecaMais {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
+  justify-content: center;
   align-items: center;
-  padding: 50px;
+  text-align: left;
 }
 
 .text-block {
@@ -15,23 +34,31 @@
 }
 
 .image-block img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 
 /* Carrossel */
+.noticias{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10%;
+}
 .carouselNoticias {
   display: flex;
+  flex-direction: column;
   overflow: hidden;
-  padding: 20px;
+  justify-content: center;
+  gap:50px;
 }
 
 .carousel-item {
   min-width: 100%;
-  display: flex;
+  display: flex !important;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 100px;
+  justify-content: center;
 }
 
 .carousel-content {
@@ -42,8 +69,47 @@
   max-width: 50%;
 }
 
-/* Seção de cards */
-.projetos {
+/* Remove o estilo de lista (pontos) */
+.slick-dots {
+  list-style-type: none; /* Remove os pontos das listas */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  display: flex; /* Exibe as bolinhas em linha */
+  justify-content: center; /* Centraliza as bolinhas no carrossel */
+}
+
+/* Estilo básico das bolinhas */
+.slick-dots li {
+  margin: 0 5px; /* Espaçamento entre as bolinhas */
+}
+
+/* Remove o texto (números) dentro das bolinhas e bordas */
+.slick-dots li button {
+  font-size: 0; /* Remove os números dentro da bolinha */
+  border: none; /* Remove a borda */
+  outline: none; /* Remove o contorno */
+  background-color: #ccc; /* Cor padrão da bolinha */
+  display: block; /* Garante que as bolinhas ainda sejam visíveis */
+  width: 20px; 
+  height: 20px;
+  border-radius: 50%; /* Bolinhas redondas */
+}
+
+/* Bolinha ativa (do slide atual) */
+.slick-dots li.slick-active button {
+  background-color: #9e9e9e; /* Cor mais forte para a bolinha ativa */
+}
+
+
+
+/* Seção de projetos */
+
+.projetos{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10%;
+}
+.cardsProjetos {
   display: flex;
   justify-content: space-between;
   gap: 20px;
