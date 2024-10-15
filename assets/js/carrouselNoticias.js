@@ -1,8 +1,5 @@
-// Seleciona o elemento do carrossel de notícias
 const carouselNoticias = document.querySelector('#carouselNoticias');
-console.log(carouselNoticias);
 
-// Aguarda o carregamento do DOM
 document.addEventListener('DOMContentLoaded', function() {
   // Inicializa o Slick quando o documento estiver pronto
   $(carouselNoticias).slick({
@@ -10,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesToShow: 1, // Mostra 1 slide por vez
     slidesToScroll: 1, // Rola 1 slide por vez
     autoplay: true, // Habilita autoplay
-    autoplaySpeed: 2000, // Velocidade do autoplay em milissegundos
+    autoplaySpeed: 8000, // Velocidade do autoplay em milissegundos
+    dots: true, // Ativa as bolinhas de navegação
+    arrows: false, // Remove as setas de navegação
   });
 });
