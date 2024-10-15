@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-dark="false">
   {% include head.html %}
-  <body>
+  <body class="body-default">
     {% include header.html %}
-    <main>
+    <main class="main-default">
       {% include content.html content=content %}
     </main>
     {% include footer.html %}
   </body>
+  {% include scripts.html %}
 </html>
