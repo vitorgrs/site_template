@@ -1,0 +1,110 @@
+---
+layout: manager
+title: forms noticia
+---
+
+<h1 class="titulo">Formulário de Notícias</h1>
+
+<form action="" method="post" class="form">
+    <div id="form_fields">
+
+            <label for="titulo" class="labelfield">Título</label>
+            <input type="text" id="tituloNoticia" name="titulo" required minlength="10" maxlength="100" placeholder="Insira o seu título aqui" />
+            
+            <label for="imagem" class="labelfield">Imagem</label>
+            <input type="file" accept="image/*" name="imagem" class="inputImage"/>
+            
+            <label for="autores" class="labelfield">Autores</label>
+            <input type="text" id="addChip1" name="autores" />
+            <div class="chip-container1"></div>
+
+            <label for="tags" class="labelName">Tags</label>
+            <input type="text" name="tags" id="addChip" placeholder="Ex: Machine Learning, PLN">
+            <div class="chip-container"></div>
+            
+            <label for="descricao" class="labelfield">Descrição</label>
+            <!--<input type="text" id="descricaoNoticia" name="descricao" required minlength="20" maxlength="500" placeholder="Insira uma breve descrição ou biografia aqui"/>-->
+            <textarea name="descricao" id="descricaoNoticia" required minlength="20" maxlength="500" placeholder="Insira uma breve descrição ou biografia aqui"></textarea>
+        
+        <div class="button_row">
+            <a href="http://localhost:4000" class="cancelButton" >Cancelar</a>
+            <!--<button type="button" name="cancelar" class = "cancelButton">Cancelar</button>-->
+            <button type="submit" name="enviar" class = "submit">Enviar</button>
+        </div>
+    </div>
+
+</form>
+
+<script>
+    const chipContainer = document.querySelector(".chip-container");
+    
+    function createChip(name){
+        const chip = document.createElement("div");
+        //chip element
+        chip.classList.add("chip")
+        //chip avatar element
+        const chipName = document.createElement("div"); 
+        chipName.classList.add("chipText");
+        chipName.textContent = name; 
+        const closeIcon = document.createElement("div"); 
+        closeIcon.classList.add("close-icon"); 
+        closeIcon.textContent = "x"; 
+        closeIcon.addEventListener( 
+            "click", 
+            function () { 
+                chip.remove(); 
+            }); 
+        chip.appendChild(chipName); 
+        chip.appendChild(closeIcon); 
+        chipContainer.appendChild(chip);
+    }
+
+    const addChipInput = document.getElementById("addChip")
+
+    addChipInput.addEventListener('keydown', function(e){
+        if(e.key == 'Enter'){
+            event.preventDefault();
+            const name = addChipInput.value.trim();
+            if (name !== ""){
+                createChip(name);
+                addChipInput.value = "";
+            }
+        }
+    })
+
+    const chipContainer1 = document.querySelector(".chip-container1");
+    
+    function createChip1(name){
+        const chip1 = document.createElement("div");
+        //chip element
+        chip1.classList.add("chip1")
+        //chip avatar element
+        const chipName1 = document.createElement("div"); 
+        chipName1.classList.add("chipText");
+        chipName1.textContent = name; 
+        const closeIcon1 = document.createElement("div"); 
+        closeIcon1.classList.add("close-icon"); 
+        closeIcon1.textContent = "x"; 
+        closeIcon1.addEventListener( 
+            "click", 
+            function () { 
+                chip1.remove(); 
+            }); 
+        chip1.appendChild(chipName1); 
+        chip1.appendChild(closeIcon1); 
+        chipContainer1.appendChild(chip1);
+    }
+
+    const addChipInput1 = document.getElementById("addChip1")
+
+    addChipInput1.addEventListener('keydown', function(e){
+        if(e.key == 'Enter'){
+            event.preventDefault();
+            const name = addChipInput1.value.trim();
+            if (name !== ""){
+                createChip1(name);
+                addChipInput1.value = "";
+            }
+        }
+    })
+</script>
