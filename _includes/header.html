@@ -20,15 +20,9 @@
   {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
-    {% if logo %}
-      <span class="logo">
-        {% if svg %}
-          {{ svg | file_read }}
-        {% else %}
-          <img src="{{ logo | relative_url }}" alt="logo">
-        {% endif %}
+      <span>
+          <img class="logo" src="{{ logo | relative_url }}" alt="logo">
       </span>
-    {% endif %}
   </a>
 
   <nav class="nav-header ">
