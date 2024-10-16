@@ -1,5 +1,5 @@
 ---
-<title>forms projeto</title>
+
 layout: manager
 ---
 
@@ -8,7 +8,7 @@ layout: manager
 
 <h1 class="tituloForm">Cadastre um novo projeto</h1>
 
-<form action="http://localhost:3000/submit" method="POST" id="form_projeto">
+<form id="form_projeto" onsubmit="return false">
 
     <div id="form_fields">
         <label for="titulo" class="labelName">Título </label>
@@ -37,7 +37,7 @@ layout: manager
 
         <div class="buttonRow">
             <button type="button" class="cancelarButton">Cancelar</button>
-            <button type="submit" class="enviarButton">Enviar</button>
+            <button type="submit" class="enviarButton" id="enviarButton">Enviar</button>
         </div>
     </div>
 
@@ -83,4 +83,55 @@ layout: manager
             }
         }
     })
+
+    const apiProjUrl = "http://localhost:3000/submit";
+
+
+    formProjeto = document.getElementById("form_projeto")
+
+    
+    if (formProjeto){
+        formProjeto.addEventListener("submit", (e) =>{
+            e.preventDefault();
+            formData = new FormData(formProjeto);
+            const data = {
+                'proj_titulo' : formData.get('proj_titulo'),
+                'proj_subtitulo': formData.get('proj_subtitulo'),
+                'grupo_projeto': formData.get('grupo_projeto'),
+                'filefoto': formData.get('filefoto'),
+                'link_projeto': formData.get('link_projeto'),
+                'desc_projeto': formData.get('desc_projeto'),
+                'chip': [] 
+            }
+
+            const chips = document.getElementsByClassName('chip');
+            
+            var result = Object.keys(chips).map((key) => [chips[key]]);
+
+            result.forEach(elem => {
+                text = elem[0]['innerText'];
+                //Regex para lidar com a quebra de linha das tags
+                text = text.split(/[\r\n]/g)[0];
+                data.chip.push(text);
+            })
+
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            };
+
+            fetch(apiProjUrl, requestOptions)
+            .then(response => {
+                if (!response.ok){
+                    throw new Error('Erro ao chamar API');
+                }
+                return response.json();
+            })
+        })
+    }
+
+
 </script>
