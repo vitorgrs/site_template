@@ -3,3 +3,16 @@ title: Notícias
 nav:
   order: 4
 ---
+
+<section class="Titulopagina">
+  <h1>Notícias</h1>
+  <p>Veja as últimas notícias sobre o Nca.</p>
+</section>
+
+{% include search-box.html %}
+
+{% include tags.html tags=site.tags %}
+
+{% include search-info.html %}
+
+{% include list.html data="posts" component="post-excerpt" %}
