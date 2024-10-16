@@ -116,12 +116,55 @@
   padding: 20px;
 }
 
-.card {
+.cardprojeto {
   text-align: center;
   max-width: 30%;
 }
 
-.card img {
+.cardprojeto img {
   max-width: 100%;
   height: auto;
+}
+
+
+
+.laboratorios{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardslaboratorios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cardlaboratorio img{
+  border-radius: 100%;
+}
+.cardlaboratorio h3{
+}
+
+.projetos{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+.cardsProjetos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.parceiras{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logospaceiras{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
 }
