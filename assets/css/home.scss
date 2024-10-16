@@ -141,9 +141,11 @@
 }
 .cardlaboratorio img{
   border-radius: 100%;
+  min-width: 10rem;
+  min-height: 10rem;
+  max-width: 10rem;
 }
-.cardlaboratorio h3{
-}
+
 
 .projetos{
   padding: 50px 10%;
@@ -156,15 +158,22 @@
   justify-content: space-around;
 }
 
-.parceiras{
+.parcerias{
   padding: 50px 10%;
   display: flex;
   flex-direction: column;
 }
 
-.logospaceiras{
+.logosparcerias {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  
+  flex-wrap: wrap; 
+  gap: 30px; 
+  justify-content: center; 
 }
+
+.logosparcerias img {
+  flex: 1 1 calc(100px - 30px); 
+  max-width: calc(14.28% - 30px); 
+  height: auto;
+}
+
