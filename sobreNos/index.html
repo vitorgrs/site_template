@@ -3,15 +3,75 @@ title: Sobre Nós
 nav:
   order: 2
 ---
+<style>
+  /* Estilos básicos para os botões */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 1s ease;
+  }
+  /* Estilo básico para os containers de texto */
+  .content {
+    display: none; /* Os containers de texto começam escondidos */
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .active {
+    display: block; /* Mostra o container ativo */
+  }
+
+   /* Estilo quando o botão é clicado */
+   .selected {
+      border: 2px solid black;
+      transform: scale(1.1); /* Efeito de zoom */
+    }
+
+    /* Efeito hover: muda a cor quando o mouse passa por cima */
+    .btn1:hover {
+      background-color: rgb(137, 93, 172); /* Cor mais escura quando o mouse está sobre o botão */
+    }
+
+    .btn2:hover {
+      background-color: rgb(249, 40, 55);
+    }
+
+    .btn3:hover {
+      background-color: rgb(228, 156, 65);
+    }
+
+    .btn4:hover {
+      background-color: rgb(120, 123, 157);
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <section class="InformacoesPricipais">
 
   <h2>Conheça o Nca</h2>
 
-  <div style="display: flex; width: 100%; height: 7px;">
-    <div style="flex: 1; background-color: rgb(249, 40, 55);"></div>
-    <div style="flex: 1; background-color: rgb(120, 123, 157);"></div>
+  <div style="display: flex; width: 100wv; height: 7px;">
     <div style="flex: 1; background-color: rgb(137, 93, 172);"></div>
+    <div style="flex: 1; background-color: rgb(249, 40, 55);"></div>
     <div style="flex: 1; background-color: rgb(228, 156, 65);"></div>
+    <div style="flex: 1; background-color: rgb(120, 123, 157);"></div>
   </div>
 
   <div style="float: left; margin-right: 20px;">
@@ -38,18 +98,79 @@ nav:
     <div style="flex: 1; background-color: rgb(120, 123, 157);"></div>
   </div>
 </section>
+<section class="linhasdepesquisadinamicas">
+<div class="buttons">
+  <button class="buttons btn1" onclick="showContent(1); toggleSelection(this)"><i class="fa-solid fa-qrcode"></i>
+  </button>
+  <button class="buttons btn2" onclick="showContent(2); toggleSelection(this)"><i class="fa-solid fa-terminal"></i>
+  </button>
+  <button class="buttons btn3" onclick="showContent(3); toggleSelection(this)"><i class="fa-solid fa-sitemap"></i></button >
+  <button class="buttons btn4" onclick="showContent(4); toggleSelection(this)"><i class="fa-solid fa-microchip"></i></button>
+</div>
 
+<div id="content1" class="content">
+  <h3>Visão computacional</h3>
+  <div class="container image-left">
+    <div class="image-container">
+        <img src="../assets/images/sobrenos/visão computacional.jpg" alt="Descrição da Imagem">
+    </div>
+      <div class="text-container">
+        <h2>Visão computacional</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+  </div>
+</div>
+
+<div id="content2" class="content">
+  <h3>ciencia de dados</h3>
+  <div class="container image-right">
+    <div class="image-container">
+        <img src="../assets/images/sobrenos/Ciencia de dados.jpg" alt="Descrição da Imagem">
+    </div>
+    <div class="text-container">
+        <h2>Ciencia de dados</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
+
+<div id="content3" class="content">
+  <h3>RA e RV</h3>
+  <div class="container image-left">
+    <div class="image-container">
+        <img src="../assets/images/sobrenos/realidade virtual e aumentada.jpeg" alt="Descrição da Imagem">
+    </div>
+    <div class="text-container">
+        <h2>Realidade Virtual e Aumentadas</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
+
+<div id="content4" class="content">
+  <h3>IA</h3>
+  <div class="container image-right">
+    <div class="image-container">
+        <img src="../assets/images/sobrenos/inteligencia artificial.jpeg" alt="Descrição da Imagem">
+    </div>
+    <div class="text-container">
+        <h2>Inteligencia Artificial</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
+</section>
 <section class="linhasdepesquisa">
 
   <div class="container image-left">
-          <div class="image-container">
+      <div class="image-container">
               <img src="../assets/images/sobrenos/visão computacional.jpg" alt="Descrição da Imagem">
-          </div>
-          <div class="text-container">
+      </div>
+      <div class="text-container">
               <h2>Visão computacional</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
       </div>
+  </div>
 
   <div class="container image-right">
           <div class="image-container">
@@ -83,3 +204,45 @@ nav:
           </div>
   </div>
 </section>
+
+<script>
+  function showContent(number) {
+    // Identifica o conteúdo correspondente ao botão clicado
+    var content = document.getElementById('content' + number);
+    
+    // Verifica se o conteúdo está ativo (visível)
+    if (content.classList.contains('active')) {
+      // Se estiver ativo, oculta o conteúdo (remove a classe 'active')
+      content.classList.remove('active');
+    } else {
+      // Esconde todos os outros conteúdos
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function(content) {
+        content.classList.remove('active');
+      });
+      
+      // Mostra o conteúdo correspondente ao botão clicado (adiciona a classe 'active')
+      content.classList.add('active');
+    }
+  }
+</script>
+
+<script>
+  // Função para alternar a seleção do botão
+  function toggleSelection(button) {
+    // Verifica se o botão já está selecionado
+    if (button.classList.contains('selected')) {
+      // Se estiver selecionado, remove a seleção (desativa o botão)
+      button.classList.remove('selected');
+    } else {
+      // Remove a seleção de todos os botões
+      var allButtons = document.querySelectorAll('.btn');
+      allButtons.forEach(function(btn) {
+        btn.classList.remove('selected');
+      });
+
+      // Adiciona a seleção ao botão clicado (ativa o botão)
+      button.classList.add('selected');
+    }
+  }
+</script>
