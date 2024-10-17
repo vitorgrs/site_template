@@ -11,49 +11,77 @@
   | reverse
 %}
 
-{% for year in years %}
-  {% assign data = year.items %}
+<!-- Verificação do tipo de componente e criação das sections e divs apropriadas -->
+{% if include.component == "noticias" %}
+  <section class="noticias">
+{% elsif include.component == "projeto" %}
+  <section class="projetos">
+{% elsif include.component == "membros" %}
+  <section class="membros">
+{% elsif include.component == "publicacoes" %}
+  <section class="publicacoes">
+{% endif %}
 
-  {% if years.size > 1 %}
-    {{--}}<h3 id="{{ year.name }}">{{ year.name }}</h3>
-    {% assign data = data | sort: "date" | reverse %}
-  {% endif %}
+  <!-- Loop para criar as divs e os cards do conteúdo, separado por ano -->
+  {% for year in years %}
+    {% assign data = year.items %}
 
-  {% for d in data %}
-    {% assign style = d.style | default: include.style %}
+    <!-- Div comum para ano e cards -->
+    <div class="anoecards">
+      <h3 class="ano">{{ year.name }}</h3> <!-- Exibe o ano -->
 
-    {%
-      include {{ include.component | append: ".html" }}
-      affiliation=d.affiliation
-      author=d.author
-      authors=d.authors
-      buttons=d.buttons
-      caption=d.caption
-      content=d.content
-      date=d.date
-      description=d.description
-      excerpt=d.excerpt
-      height=d.height
-      icon=d.icon
-      id=d.id
-      image=d.image
-      last_modified_at=d.last_modified_at
-      link=d.link
-      lookup=d.lookup
-      name=d.name
-      publisher=d.publisher
-      repo=d.repo
-      role=d.role
-      slug=d.slug
-      style=style
-      subtitle=d.subtitle
-      tags=d.tags
-      text=d.text
-      title=d.title
-      tooltip=d.tooltip
-      type=d.type
-      url=d.url
-      width=d.width
-    %}
+      <!-- Div específica para os cards baseados no tipo de componente -->
+      {% if include.component == "noticias" %}
+        <div class="cardsnoticias">
+      {% elsif include.component == "projetos" %}
+        <div class="cardsprojetos">
+      {% elsif include.component == "portrait" %}
+        <div class="cardsmembros">
+      {% elsif include.component == "publicacoes" %}
+        <div class="cardspublicacoes">
+      {% endif %}
+
+      <!-- Loop pelos itens (posts, projetos, membros, publicações) -->
+      {% for d in data %}
+        {% assign style = d.style | default: include.style %}
+        
+        {%
+          include {{ include.component | append: ".html" }}
+          affiliation=d.affiliation
+          author=d.author
+          authors=d.authors
+          buttons=d.buttons
+          caption=d.caption
+          content=d.content
+          date=d.date
+          description=d.description
+          excerpt=d.excerpt
+          height=d.height
+          icon=d.icon
+          id=d.id
+          image=d.image
+          last_modified_at=d.last_modified_at
+          link=d.link
+          lookup=d.lookup
+          name=d.name
+          publisher=d.publisher
+          repo=d.repo
+          role=d.role
+          slug=d.slug
+          style=style
+          subtitle=d.subtitle
+          tags=d.tags
+          text=d.text
+          title=d.title
+          tooltip=d.tooltip
+          type=d.type
+          url=d.url
+          width=d.width
+        %}
+      {% endfor %}
+
+      </div> 
+    </div> 
   {% endfor %}
-{% endfor %}
+
+</section> 
