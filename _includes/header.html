@@ -25,21 +25,29 @@
       </span>
   </a>
 
-  <nav class="nav-header ">
+  <nav class="nav-header">
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
     %}
-    {% for page in pages %}
-      {% if page.nav %}
-        <a
-          href="{{ page.dir | relative_url }}"
-        >
-          {{ page.title }}
-        </a>
+    {% for nav_page in pages %}
+      {% if nav_page.title == page.title %}
+        {% assign active_class = "active" %}
+      {% else %}
+        {% assign active_class = "" %}
       {% endif %}
+      <a
+        href="{{ nav_page.url | relative_url }}"
+        class="{{ active_class }}"
+        id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
+      >
+        {{ nav_page.title }}
+      </a>
     {% endfor %}
   </nav>
+  
+  
+  
 
   
 
