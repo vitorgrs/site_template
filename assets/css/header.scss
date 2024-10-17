@@ -11,10 +11,10 @@ $sticky: true; // Define se o cabeçalho será fixo ou não.
 header {
   display: flex; // O header será um contêiner flexível.
   flex-direction: row; // Os itens dentro do header serão exibidos em linha.
-  background-color: white; // A cor de fundo do header será branca.
   justify-content: space-between; // Espaçamento igual entre os itens do header.
   align-items: center; // Os itens serão centralizados verticalmente.
   padding: 20px 50px; // Adiciona um espaçamento interno de 20px ao redor do header.
+  background-color: var(--white); 
 
   @if $sticky {
     position: sticky !important; // Se $sticky for true, o header será fixo (pegajoso).
@@ -76,7 +76,7 @@ header a {
   position: relative;
   display: flex;
   gap:20px;
-  border: 2px solid #9747FF;
+  border: 2px solid var(--roxoprimary);
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
@@ -104,8 +104,8 @@ header a {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
   border-radius: 5px;
   list-style: none;
   padding: 0;
@@ -126,6 +126,6 @@ header a {
 }
 
 .language-options li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--white);
 }
 
