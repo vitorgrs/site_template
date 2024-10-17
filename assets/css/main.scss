@@ -5,8 +5,44 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  gap:30px
 }
 .main-manager{
   
 
+}
+.anoecards{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ano{
+  text-align: left;
+  margin: 0;
+}
+
+.noticias{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  gap:30px
+}
+.publicacoes{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  gap:30px
+}
+.projetos{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  gap:30px
+}
+
+.membros{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  gap:30px
 }
