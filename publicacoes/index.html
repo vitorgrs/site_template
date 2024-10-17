@@ -1,15 +1,10 @@
 ---
 title: Publicações
+layout: paginas
 nav:
   order: 6
 ---
-<section class="Titulopagina">
-  <h1>Notícias</h1>
-  <p>Veja as últimas notícias sobre o Nca.</p>
-</section>
 
-{% include search-box.html %}
-
-{% include search-info.html %}
+{% include tags.html tags=site.tags %}
 
 {% include list.html data="citations" component="citation" style="rich" %}
