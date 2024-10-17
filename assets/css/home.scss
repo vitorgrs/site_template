@@ -103,24 +103,24 @@
 
 /* Seção de projetos */
 
-.projetos{
+.ultimosprojetos{
   display: flex;
   flex-direction: column;
   padding: 50px 10%;
 }
-.cardsProjetos {
+.cardsUltimosProjetos {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
 }
 
-.cardprojeto {
+.cardUltimosProjetos {
   text-align: center;
   max-width: 30%;
 }
 
-.cardprojeto img {
+.cardUltimosProjetos img {
   max-width: 100%;
   height: auto;
 }
@@ -166,13 +166,13 @@
 .logosparcerias {
   display: flex;
   flex-wrap: wrap; 
-  gap: 30px; 
+  gap: 40px; 
   justify-content: center; 
 }
 
 .logosparcerias img {
-  flex: 1 1 calc(100px - 30px); 
-  max-width: calc(14.28% - 30px); 
+  flex: 1 1 calc(150px - 30px); 
+  max-width: calc(150px - 30px); 
   height: auto;
 }
 
