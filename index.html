@@ -23,33 +23,39 @@ css_files: ['home.scss']
 <!-- Carrossel -->
 <section class="noticias">
   <h2>Ultimas Notícias</h2>
-  <div class="carouselNoticias" id="carouselNoticias">
-    <div class="carousel-item">
-      <img src="assets/images/imagemNoticia.svg" alt="Imagem 1">
-      <div class="carousel-content">
-        <h2>Título da Página 1</h2>
-        <p>Descrição curta da Página 1 do carrossel.</p>
-        <a href="#" class="btn-secondary">Saiba Mais</a>
+  <div class="swiper-container carouselNoticias">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide carousel-item">
+        <img src="assets/images/imagemNoticia.svg" alt="Imagem 1">
+        <div class="carousel-content">
+          <h2>Título da Página 1</h2>
+          <p>Descrição curta da Página 1 do carrossel.</p>
+          <a href="#" class="btn-secondary">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item">
+        <img src="assets/images/imagemNoticia.svg" alt="Imagem 2">
+        <div class="carousel-content">
+          <h2>Título da Página 2</h2>
+          <p>Descrição curta da Página 2 do carrossel.</p>
+          <a href="#" class="btn-secondary">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item">
+        <img src="assets/images/imagemNoticia.svg" alt="Imagem 3">
+        <div class="carousel-content">
+          <h2>Título da Página 3</h2>
+          <p>Descrição curta da Página 3 do carrossel.</p>
+          <a href="#" class="btn-secondary">Saiba Mais</a>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="assets/images/imagemNoticia.svg" alt="Imagem 2">
-      <div class="carousel-content">
-        <h2>Título da Página 2</h2>
-        <p>Descrição curta da Página 2 do carrossel.</p>
-        <a href="#" class="btn-secondary">Saiba Mais</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="assets/images/imagemNoticia.svg" alt="Imagem 3">
-      <div class="carousel-content">
-        <h2>Título da Página 3</h2>
-        <p>Descrição curta da Página 3 do carrossel.</p>
-        <a href="#" class="btn-secondary">Saiba Mais</a>
-      </div>
-    </div>
+    
+    <!-- Adiciona navegação e paginação -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
+
 
 <!-- Seção de projetos -->
 <section class="ultimosprojetos" >

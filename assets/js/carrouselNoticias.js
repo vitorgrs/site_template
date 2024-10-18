@@ -1,14 +1,13 @@
-const carouselNoticias = document.querySelector('#carouselNoticias');
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Inicializa o Slick quando o documento estiver pronto
-  $(carouselNoticias).slick({
-    infinite: true, // Habilita o loop infinito
-    slidesToShow: 1, // Mostra 1 slide por vez
-    slidesToScroll: 1, // Rola 1 slide por vez
-    autoplay: true, // Habilita autoplay
-    autoplaySpeed: 8000, // Velocidade do autoplay em milissegundos
-    dots: true, // Ativa as bolinhas de navegação
-    arrows: false, // Remove as setas de navegação
+// Inicializa o Swiper.js
+document.addEventListener('DOMContentLoaded', function () {
+  var swiper = new Swiper('.swiper-container', {
+    loop: true, // Loop infinito
+    autoplay: {
+      delay: 8000, // Autoplay com 8 segundos de intervalo
+    },
+    pagination: {
+      el: '.swiper-pagination', // Bolinhas de navegação
+      clickable: true, // Permite clicar nas bolinhas
+    },
   });
 });
