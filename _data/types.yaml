@@ -178,10 +178,6 @@ unpublished:
   text: Unpublished
   tooltip: Unpublished
 
-manubot:
-  icon: manubot.svg
-  text: Manubot
-  tooltip: Manubot
 
 # software
 

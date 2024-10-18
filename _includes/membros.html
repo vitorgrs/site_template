@@ -1,0 +1,36 @@
+{% assign member = include %}
+
+<div class="cardMembro">
+  <a
+    {% if page.slug != member.slug %}
+      href="{{ member.url | relative_url }}"
+    {% endif %}
+    class="cardMembro-link"
+    
+  >
+
+    <img
+      src="{{ member.image | relative_url }}"
+      class="cardMembro-imagem"
+      alt="member portrait"
+    >
+
+    {% if member.name %}
+      <span class="cardMembro-nome">
+        {{ member.name }}
+      </span>
+    {% endif %}
+
+    {% if member.description or type %}
+      <span class="cardMembro-descricao">
+        {{ member.description | default: type.description }}
+      </span>
+    {% endif %}
+
+    {% if member.affiliation %}
+      <span class="cardMembro-afiliação">
+        {{ member.affiliation }}
+      </span>
+    {% endif %}
+  </a>
+</div>
