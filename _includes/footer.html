@@ -1,29 +1,70 @@
-{% assign image = page.footer | default: site.footer | relative_url %}
-{% assign dark = page.footer-dark | is_nil: site.footer-dark | is_nil: true %}
-
-<footer
-  class="background"
-  style="--image: url('{{ image }}')"
-  {% if dark == true or dark == false %}
-    data-dark="{{ dark }}"
-  {% endif %}
-  data-size="wide"
->
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer>
+  <div style="display: flex; width: 100%; height: 7px;">
+    <div style="flex: 1; background-color: #8A5D9E;"></div>
+    <div style="flex: 1; background-color: #C93740;"></div>
+    <div style="flex: 1; background-color: #FD9D30;"></div>
+    <div style="flex: 1; background-color: #7D5A90;"></div>
+    <div style="flex: 1; background-color: #F0343D;"></div>
+    <div style="flex: 1; background-color:#BD864C;"></div>
+  </div>
+  <!-- Logo do laboratório no canto esquerdo -->
+  <div class="informacoesecreditos">
+    <!-- Logo do laboratório com texto abaixo -->
+    <!-- Item 1 -->
+    <div class="logofooter" >
+      <img src="images/LOGO_NCA.svg" alt="Logo do Laboratório" style="height: 140px;"> 
+      <p style="margin: 0 0 0 0; font-weight: 700;"> 
+        <strong>2024 - NCA - UFMA group. Site</strong><br>
+        <strong>made template XXXXX</strong>
+      </p>
     </div>
-  -->
 
-  <div>
-    {% for link in site.links %}
-      {% assign key = link[0] %}
-      {% assign value = link[1] %}
-      {% include button.html type=key text="" link=value style="bare" %}
-    {% endfor %}
+    <!-- Item 2 -->
+    <!-- Centralizando o "Fale Conosco" e ícones -->
+    <div class="contatofooter">
+
+      <!-- Ícones de contato -->
+      <div class="linkscontatos">
+      
+      <!-- Título "Fale Conosco" -->
+      <div class="TituloContato">
+        <p> Contatos:</p>
+      </div>
+
+      <div class = "iconenome">
+        <a href="{{ site.links.google_maps }}" target="_blank" title="Google Maps">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </a> 
+        <p>NCA Lab, CCET Building<br>
+          Av. dos Portugueses, 1966 - Vila Bacanga<br>
+          São Luís - MA, 65080-805</p>
+      </div>
+      <div class="iconenome">
+        <a href="{{ site.links.email }}" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a> 
+        <p>Email:nca@nca.ufma.br</p>
+      </div>
+      <div class = "iconenome">
+        <a href="{{ site.links.linkedin }}" target="_blank" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a> 
+        <p>ncaufma</p>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <!-- Botão Fale Conosco -->
+    <div class="ImagemMaps" >
+      <img src="images/Imagem_Teste.jpg" alt="Imagem_da_Localização">
+    </div>
   </div>
 
-  <div>
+  <hr class="linhafooter">
+
+  <div style="margin-top: 0px;">
     &copy; {{ site.time | date: "%Y" }}
     {{ site.title }}
     &nbsp; | &nbsp; Built with
@@ -31,12 +72,5 @@
       Lab Website Template
     </a>
   </div>
-
-  <input
-    type="checkbox"
-    class="dark-toggle"
-    data-tooltip="Dark mode"
-    aria-label="toggle dark mode"
-    oninput="onDarkToggleChange(event)"
-  >
+  
 </footer>
