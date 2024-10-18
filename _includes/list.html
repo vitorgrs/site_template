@@ -11,10 +11,9 @@
   | reverse
 %}
 
-<!-- Verificação do tipo de componente e criação das sections e divs apropriadas -->
 {% if include.component == "noticias" %}
   <section class="noticias">
-{% elsif include.component == "projeto" %}
+{% elsif include.component == "projetos" %}
   <section class="projetos">
 {% elsif include.component == "membros" %}
   <section class="membros">
@@ -22,26 +21,22 @@
   <section class="publicacoes">
 {% endif %}
 
-  <!-- Loop para criar as divs e os cards do conteúdo, separado por ano -->
   {% for year in years %}
     {% assign data = year.items %}
 
-    <!-- Div comum para ano e cards -->
     <div class="anoecards">
-      <h3 class="ano">{{ year.name }}</h3> <!-- Exibe o ano -->
+      <h3 class="ano">{{ year.name }}</h3> 
 
-      <!-- Div específica para os cards baseados no tipo de componente -->
       {% if include.component == "noticias" %}
         <div class="cardsnoticias">
       {% elsif include.component == "projetos" %}
         <div class="cardsprojetos">
-      {% elsif include.component == "portrait" %}
+      {% elsif include.component == "membros" %}
         <div class="cardsmembros">
       {% elsif include.component == "publicacoes" %}
         <div class="cardspublicacoes">
       {% endif %}
 
-      <!-- Loop pelos itens (posts, projetos, membros, publicações) -->
       {% for d in data %}
         {% assign style = d.style | default: include.style %}
         
