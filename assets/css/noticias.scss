@@ -6,12 +6,13 @@
   flex-direction: row;
   gap:30px;
   justify-content: center;
+  width: 100%;
 }
 
 .cardnoticia {
   display: flex;
   flex-direction: column;
-  width: 33.33%;
+  max-width: calc(33.33% - 60px);
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
 
@@ -30,6 +31,7 @@
   flex-wrap: wrap;
   gap: 20px;
   text-align: left;
+  align-items: flex-start;
 }
 
 .cardnoticiatext > a:first-child {
@@ -40,6 +42,7 @@
 .cardnoticiatext > div {
   justify-content: center;
   margin: 0;
+  width: 100%;
 }
 
 .cardnoticiatext > p {
