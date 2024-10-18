@@ -1,6 +1,6 @@
 ---
 name: Jane Smith
-image: images/photo.jpg
+image: assets/images/logo.svg
 role: pi
 affiliation: University of Colorado
 aliases:

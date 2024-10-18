@@ -1,6 +1,6 @@
 ---
 name: John Doe
-image: images/photo.jpg
+image: assets/images/logo.svg
 role: phd
 group: alum
 links:

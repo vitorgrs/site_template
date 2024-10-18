@@ -9,7 +9,9 @@
   | split: ","
   | uniq
 %}
-{% assign link = include.link | default: page.dir | absolute_url %}
+<!--{% assign link = include.link | default: page.dir | absolute_url %}-->
+
+{% assign link = include.link | default: page.dir | prepend: "http://localhost:4000" %}
 {% if tags.size > 0 or include.repo %}
   <div
     class="tags"
@@ -24,7 +26,6 @@
       <a
         href="{{ link }}?search=&quot;tag: {{ tag }}&quot;"
         class="tag"
-        data-tooltip="Show items with the tag &quot;{{ tag }}&quot;"
       >
         {{ tag }}
       </a>

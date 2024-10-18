@@ -1,16 +1,3 @@
-# site properties and page defaults
-title: Lab Website Template
-subtitle: by the Greene Lab
-description: An easy-to-use, flexible website template for labs, with automatic citations, GitHub tag imports, pre-built components, and more.
-header: images/background.jpg
-footer: images/background.jpg
-proofer: false
-
-# site social media and other links
-links:
-  email: "mailto:nca@nca.ufma.br"
-  linkedin: "https://www.linkedin.com/company/ncaufma/"
-  google_maps: "https://www.google.com.br/maps/place/N%C3%BAcleo+de+computa%C3%A7%C3%A3o+Aplicada+UFMA/@-2.5588169,-44.3075172,17z/data=!3m1!4b1!4m6!3m5!1s0x7f68f5cf9040faf:0xfcfade37aaad117d!8m2!3d-2.5588169!4d-44.3075172!16s%2Fg%2F11ggfy_zdy?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
 
 ### jekyll settings
 
@@ -31,6 +18,8 @@ defaults:
       type: "posts"
     values:
       layout: post
+
+
 
 collections:
   # generate page for each member
@@ -54,14 +43,13 @@ highlighter: rouge
 # jekyll theme
 theme: null
 
-# sass settings
 sass:
-  sass_dir: _styles
+  sass_dir: assets/css
 
 # force jekyll to include certain files/folders
 include:
-  - _styles
-  - _scripts
+  - assets/css
+  - assets/js
 
 # force jekyll to exclude certain files/folders
 exclude:
