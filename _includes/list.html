@@ -13,12 +13,18 @@
 
 {% if include.component == "noticias" %}
   <section class="noticias">
+    {% include tags.html tags=site.tags %}
+    {% include search-info.html %}
 {% elsif include.component == "projetos" %}
   <section class="projetos">
+    {% include tags.html tags=site.tags %}
+    {% include search-info.html %}
 {% elsif include.component == "membros" %}
   <section class="membros">
 {% elsif include.component == "publicacoes" %}
   <section class="publicacoes">
+    {% include tags.html tags=site.tags %}
+    {% include search-info.html %}
 {% endif %}
 
   {% for year in years %}
