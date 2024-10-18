@@ -1,20 +1,14 @@
-{% if include.lookup %}
-  {% assign publicacoes = site.data.publicacoess
-    | where_exp: "publicacoes",
-      "publicacoes.id == include.lookup or publicacoes.title contains include.lookup"
-    | first
-  %}
-{% else %}
-  {% assign publicacoes = include %}
-{% endif %}
+{% assign publicacoes = include %}
+
 <div class="cardpublicacao">
+
   <a
       {% if publicacoes.link %}
         href="{{ publicacoes.link | relative_url }}"
       {% endif %}
       class="cardpublicacao-link"
   >   
-      {% if include.style == "rich" %}
+      {% if publicacoes.image %}
         <img class="cardpublicacao-imagem"
           src="{{ publicacoes.image | relative_url }}"
           alt="{{ publicacoes.title | default: "publicacoes image" }}"
@@ -29,9 +23,6 @@
     
         <div
           class="cardpublicacao-autores"
-          {% if publicacoes.authors.size > 10 %}
-            data-tooltip="{{ publicacoes.authors | join: ", " }} "
-          {% endif %}
           tabindex="0"
         >
           {{
