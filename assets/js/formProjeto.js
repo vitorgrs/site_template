@@ -38,40 +38,31 @@ const chipContainer = document.querySelector(".chip-container");
     const apiProjUrl = "http://localhost:3000/submit";
 
 
-    formProjeto = document.getElementById("form_projeto")
-
+    formProjeto = document.getElementById("form_projeto");
+    inputfoto = document.getElementById("filefoto");
     
     if (formProjeto){
         formProjeto.addEventListener("submit", (e) =>{
             e.preventDefault();
             formData = new FormData(formProjeto);
-            const data = {
-                'proj_titulo' : formData.get('proj_titulo'),
-                'proj_subtitulo': formData.get('proj_subtitulo'),
-                'grupo_projeto': formData.get('grupo_projeto'),
-                'filefoto': formData.get('filefoto'),
-                'link_projeto': formData.get('link_projeto'),
-                'desc_projeto': formData.get('desc_projeto'),
-                'chip': [] 
-            }
+           // console.log(formData);
 
             const chips = document.getElementsByClassName('chip');
             
             var result = Object.keys(chips).map((key) => [chips[key]]);
 
+            
             result.forEach(elem => {
                 text = elem[0]['innerText'];
                 //Regex para lidar com a quebra de linha das tags
                 text = text.split(/[\r\n]/g)[0];
-                data.chip.push(text);
+                //data.chip.push(text);
+                formData.append("chip", text);
             })
 
             const requestOptions = {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
+                body: formData,
             };
 
             fetch(apiProjUrl, requestOptions)

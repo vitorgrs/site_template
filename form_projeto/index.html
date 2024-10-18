@@ -5,7 +5,7 @@ layout: manager
 
 <h1 class="tituloForm">Cadastre um novo projeto</h1>
 
-<form id="form_projeto" onsubmit="return false">
+<form id="form_projeto" onsubmit="return false" enctype="multipart/form-data">
 
     <div id="form_fields">
         <label for="titulo" class="labelName">Título </label>
@@ -18,7 +18,7 @@ layout: manager
         <input list="grupos" id="grupo" name="grupo_projeto" required placeholder="Selecione seu grupo">
         
         <label for="filefoto" class="labelName" id="labelFoto">Imagem</label>
-        <input type="file" name="filefoto" id="filefoto">
+        <input type="file" name="filefoto" id="filefoto" accept="image/*">
         
 
         <label for="link_projeto" class="labelName">Link do projeto</label>
