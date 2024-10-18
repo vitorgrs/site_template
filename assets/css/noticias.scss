@@ -1,0 +1,49 @@
+---
+---
+
+.cardsnoticias{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  justify-content: center;
+}
+
+.cardnoticia {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+
+.cardnoticiaimage img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.cardnoticiatext {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 50px 50px 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.cardnoticiatext > a:first-child {
+  width: 100%;
+  font-weight: var(--semi-bold);
+}
+
+.cardnoticiatext > div {
+  justify-content: center;
+  margin: 0;
+}
+
+.cardnoticiatext > p {
+  width: 100%;
+  margin: 0;
+}
+
