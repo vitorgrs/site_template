@@ -3,7 +3,7 @@
 /* Primeira seção com imagem e texto */
 .sectionConhecaMais {
   position: relative;
-  padding: 50px 10%;
+  padding: 0 10%;
   overflow: hidden; /* Para garantir que o triângulo não saia da seção */
 }
 
@@ -42,9 +42,11 @@
 .noticias {
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
+  padding: 0 10%;
 }
-
+.noticias h2{
+  margin: 0;
+}
 .carouselNoticias {
   display: flex;
   flex-direction: column;
@@ -98,7 +100,7 @@
 .ultimosprojetos{
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
+  padding: 0 10%;
 }
 .cardsUltimosProjetos {
   display: flex;
@@ -120,7 +122,7 @@
 
 
 .laboratorios{
-  padding: 50px 10%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
 }
@@ -139,7 +141,7 @@
 
 
 .projetos{
-  padding: 50px 10%;
+  padding: 010%;
   display: flex;
   flex-direction: column;
 }
@@ -150,7 +152,7 @@
 }
 
 .parcerias{
-  padding: 50px 10%;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
 }
