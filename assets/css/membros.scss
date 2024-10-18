@@ -26,21 +26,10 @@
   box-shadow: var(--shadow);
 }
 
-
 .cardMembro-nome {
   font-family: var(--heading);
   font-weight: var(--semi-bold);
 }
-
-
-
-
-
-
-
-
-
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -99,14 +88,27 @@ border: 2px solid #ddd;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 .icone {
-width: 25px; 
-height: 25px; 
-border-radius: 50%; 
-object-fit: cover; 
-border: 2px solid #ddd; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
-justify-content: center; 
+width: 20px; 
+height: 20px; 
+object-fit: contain; 
+justify-content: center;
 }
+
+.linksmembros > .icony:nth-child(3) {
+padding: 8px;
+}
+
+.icony {
+background-color: white;
+border-radius: 50%; 
+padding: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
 .cardmembro-section {
   padding: 50px 10%; 
   display: flex;
@@ -117,9 +119,10 @@ justify-content: center;
 .cardsmembros{
   display: flex;
   flex-direction: row;
+  background-color: rgb(199, 199, 199);
+  gap: 20px;
 
 }
-
 .cardmembro {
   background-color: white;
   display: flex;
@@ -144,5 +147,5 @@ justify-content: center;
   display: flex;    
   flex-direction: row;
   gap: 20px;
+  align-items: start;
 }
-

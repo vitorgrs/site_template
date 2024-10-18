@@ -6,9 +6,13 @@ affiliation: University of Colorado
 aliases:
   - J. Smith
   - J Smith
-links:
-  home-page: https://www.youtube.com/watch?v=KAD5dBLXaJo&list=RDEMM2rZPBD7UWDWUUWvYAbz0Q&index=15
-  orcid: 0000-0001-8713-9213
+linklattes: https://lattes.cnpq.br/
+linkorcid: https://lattes.cnpq.br/
+linklinkedin: https://lattes.cnpq.br/
+linkemail: https://lattes.cnpq.br/
+linkgithub: https://lattes.cnpq.br/
+
+ 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
