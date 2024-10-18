@@ -1,0 +1,170 @@
+---
+---
+/* Primeira seção com imagem e texto */
+.sectionConhecaMais {
+  position: relative;
+  padding: 50px 10%;
+  overflow: hidden; /* Para garantir que o triângulo não saia da seção */
+}
+
+.sectionConhecaMais::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--roxoprimary); /* Cor do triângulo */
+  clip-path: polygon(100% 100%, 0 100%, 100% 75%);
+  z-index: -1;
+}
+
+.conhecaMais {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.text-block {
+  max-width: 50%;
+}
+
+.image-block img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Carrossel */
+.noticias {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10%;
+}
+
+.carouselNoticias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative; 
+
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  min-width: 100%;
+}
+
+.carousel-content {
+  max-width: 50%;
+}
+
+.carousel-item img {
+  max-width: 50%;
+}
+.swiper-pagination {
+  position: absolute; 
+  bottom: 10px; 
+  width: 100%; 
+  text-align: center; 
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--light-gray); /* Cor padrão das bolinhas */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--gray); /* Cor das bolinhas ativas */
+}
+
+
+/* Seção de projetos */
+
+.ultimosprojetos{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10%;
+}
+.cardsUltimosProjetos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cardUltimosProjetos {
+  text-align: center;
+  max-width: 30%;
+}
+
+.cardUltimosProjetos img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.laboratorios{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardslaboratorios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cardlaboratorio img{
+  border-radius: 100%;
+  min-width: 10rem;
+  min-height: 10rem;
+  max-width: 10rem;
+}
+
+
+.projetos{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+.cardsProjetos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.parcerias{
+  padding: 50px 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logosparcerias {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 40px; 
+  justify-content: center; 
+}
+
+.logosparcerias img {
+  flex: 1 1 calc(150px - 30px); 
+  max-width: calc(150px - 30px); 
+  height: auto;
+}
+

@@ -1,0 +1,109 @@
+<!--
+
+<div class="cardMembro">
+  <a
+    {% if page.slug != member.slug %}
+      href="{{ member.url | relative_url }}"
+    {% endif %}
+    class="cardMembro-link"
+    
+  >
+
+    <img
+      src="{{ member.image | relative_url }}"
+      class="avatar"
+      alt="Profile Picture"
+    >
+
+    {% if member.name %}
+      <span class="cardMembro-nome">
+        {{ member.name }}
+      </span>
+    {% endif %}
+    <div class="linksmembros">
+    {% if member.linklattes %}
+      <a class="cardMembro-afiliação"  href="{{ member.linklattes }}">
+        <img src="../assets/icones/lattes-002.svg" class = "icone"></a>
+      </div>
+      </a>
+    {% endif %}
+    
+</div>
+
+
+
+{% assign members = include %}
+<div class="cardmembro">
+  <a>
+  <div class="cardmembroimage">
+    <img src="{{ members.image | relative_url }}" alt="Profile Picture" class="avatar">
+  </div>
+  <div class="cardmembro-text">
+    {% if page.slug != members.slug %}
+      <a href="{{ members.url | relative_url }}" class="cardmembro-title">
+        {{ members.name }}
+      </a>
+    {% else %}
+      <span class="cardmembro-title">{{ members.name }}</span>
+    {% endif %}
+    
+    <div class="linksmembros">
+      {% if members.linklattes %}
+        <a href="{{ members.linklattes }}"><img src="../assets/icones/lattes-002.svg" class="icone"></a>
+      {% endif %}
+      {% if members.linkorcid %}
+        <a href="{{ members.linkorcid }}"><img src="../assets/icones/orcid.svg" class="icone"></a>
+      {% endif %}
+      {% if members.linkedin %}
+        <a href="{{ members.linkedin }}"><img src="../assets/icones/linkedin.svg" class="icone"></a>
+      {% endif %}
+      {% if members.email %}
+        <a href="mailto:{{ members.email }}"><img src="../assets/icones/email.svg" class="icone"></a>
+      {% endif %}
+      {% if members.github %}
+        <a href="{{ members.github }}"><img src="../assets/icones/git.svg" class="icone"></a>
+      {% endif %}
+    </div>
+  </div>
+</a>
+</div>
+-->
+
+<div class="cardmembro">
+  <a>
+    <div class="cardmembroimage">
+      {% if members.image %}
+        <img src="{{ members.image | relative_url }}" alt="Profile Picture" class="avatar">
+      {% else %}
+        <img src="../assets/images/logo.svg" alt="Default Profile Picture" class="avatar">
+      {% endif %}
+    </div>
+    <div class="cardmembro-text">
+      {% if page.slug != members.slug %}
+        <a href="{{ members.url | relative_url }}" class="cardmembro-title">
+          {{ members.name }}
+        </a>
+      {% else %}
+        <span class="cardmembro-title">{{ members.name }}</span>
+      {% endif %}
+      
+      <div class="linksmembros">
+        {% if members.linklattes %}
+          <a href="{{ members.linklattes }}"><img src="../assets/images/icones-membros/lattes-002.svg" class="icone"></a>
+        {% endif %}
+        {% if members.linkorcid %}
+          <a href="{{ members.linkorcid }}"><img src="../assets/images/icones-membros/orcid.svg" class="icone"></a>
+        {% endif %}
+        {% if members.linkedin %}
+          <a href="{{ members.linkedin }}"><img src="../assets/images/icones-membros/linkedin.svg" class="icone"></a>
+        {% endif %}
+        {% if members.email %}
+          <a href="mailto:{{ members.email }}"><img src="../assets/images/icones-membros/email.svg" class="icone"></a>
+        {% endif %}
+        {% if members.github %}
+          <a href="{{ members.github }}"><img src="../assets/images/icones-membros/git.svg" class="icone"></a>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</div>

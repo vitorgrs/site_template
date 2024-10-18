@@ -1,13 +1,13 @@
 ---
 name: Jane Smith
-image: assets/images/photo.jpg
+image: "../assets/images/logo.svg"
 role: pi
 affiliation: University of Colorado
 aliases:
   - J. Smith
   - J Smith
 links:
-  home-page: https://janesmith.com
+  home-page: https://www.youtube.com/watch?v=KAD5dBLXaJo&list=RDEMM2rZPBD7UWDWUUWvYAbz0Q&index=15
   orcid: 0000-0001-8713-9213
 ---
 

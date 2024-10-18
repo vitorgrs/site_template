@@ -20,32 +20,34 @@
   {% endif %}
 >
   <a href="{{ "/" | relative_url }}" class="home">
-    {% if logo %}
-      <span class="logo">
-        {% if svg %}
-          {{ svg | file_read }}
-        {% else %}
-          <img src="{{ logo | relative_url }}" alt="logo">
-        {% endif %}
+      <span>
+          <img class="logo" src="{{ logo | relative_url }}" alt="logo">
       </span>
-    {% endif %}
   </a>
 
-  <nav class="nav-header ">
+  <nav class="nav-header">
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
     %}
-    {% for page in pages %}
-      {% if page.nav %}
-        <a
-          href="{{ page.dir | relative_url }}"
-        >
-          {{ page.title }}
-        </a>
+    {% for nav_page in pages %}
+      {% if nav_page.title == page.title %}
+        {% assign active_class = "active" %}
+      {% else %}
+        {% assign active_class = "" %}
       {% endif %}
+      <a
+        href="{{ nav_page.url | relative_url }}"
+        class="{{ active_class }}"
+        id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
+      >
+        {{ nav_page.title }}
+      </a>
     {% endfor %}
   </nav>
+  
+  
+  
 
   
 
@@ -68,27 +70,4 @@
   </div>
   
 </header>
-<script>
-  document.querySelector('.selected-language').addEventListener('click', function() {
-  const options = document.querySelector('.language-options');
-  options.style.display = options.style.display === 'none' || !options.style.display ? 'block' : 'none';
-});
 
-document.querySelectorAll('.language-options li').forEach(function(option) {
-  option.addEventListener('click', function() {
-    const selectedLang = document.querySelector('.selected-language');
-    const img = option.querySelector('img').src;
-    const lang = option.querySelector('span').innerText;
-
-    selectedLang.querySelector('img').src = img;
-    selectedLang.querySelector('span').innerText = lang;
-
-    document.querySelector('.language-options').style.display = 'none';
-
-    // Aqui você pode adicionar lógica para mudar o idioma da página
-    const selectedLangCode = option.getAttribute('data-lang');
-    console.log("Idioma selecionado:", selectedLangCode);
-  });
-});
-
-</script>

@@ -6,64 +6,63 @@
   <body class=body-manager>
     
       <nav id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-          <div class="title">
-            <h3 class="sidebar-title">Administrador</h3>
-            <button id="sidebarCollapse" class="button-sidebar">
-              <i class="fa-solid fa-bars"></i>
-            </button>
+        <div class="headersidebarenav">
+          <div class="sidebar-header">
+            <div class="sidebar-title">
+              <h3 class="title-user">Administrador</h3>
+              <button id="sidebarCollapse" class="button-sidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <p class="sidebar-email">lorem ipsum</p>
           </div>
-          <p class="sidebar-email">lorem ipsum</p>
+          <ul class="nav-sidebar components">
+            <li>
+              <a href="/manager">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="/manager/membros">
+                <i class="fa-solid fa-users"></i>
+                <span>Membros</span>
+              </a>
+            </li>
+            <li>
+              <a href="/manager/projetos">
+                <i class="fas fa-home"></i>
+                <span>Projetos</span>
+              </a>
+            </li>
+            <li>
+              <a href="/manager/noticias">
+                <i class="fa-solid fa-gear"></i>
+                <span>Notícias</span>
+              </a>
+            </li>
+            <li>
+              <a href="/manager/publicacoes">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Publicações</span>
+              </a>
+            </li>
+            <li>
+              <a href="/manager/config">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="list-unstyled components">
-          <li>
-            <a href="/manager">
-              <i class="fa-solid fa-house"></i>
-              <span>Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="/manager/membros">
-              <i class="fa-solid fa-users"></i>
-              <span>Membros</span>
-            </a>
-          </li>
-          <li>
-            <a href="/manager/projetos">
-              <i class="fas fa-home"></i>
-              <span>Projetos</span>
-            </a>
-          </li>
-          <li>
-            <a href="/manager/noticias">
-              <i class="fa-solid fa-gear"></i>
-              <span>Notícias</span>
-            </a>
-          </li>
-          <li>
-            <a href="/manager/publicacoes">
-              <i class="fa-solid fa-address-card"></i>
-              <span>Publicações</span>
-            </a>
-          </li>
-          <li>
-            <a href="/manager/config">
-              <i class="fa-solid fa-gear"></i>
-              <span>Configurações</span>
-            </a>
-          </li>
-        </ul>
-      
-      <div class="sidebar-footer">
-        <a class="title" href="/"">
-          <button class="button-logout">
-            <i class="fa-solid fa-right-to-bracket"></i>
-          </button>
-          <h3 class="sidebar-logout">Sair</h3>
-  
-        </a>
-        
-      </div>
+        <div class="sidebar-footer">
+          <a class="iconetitlelogout" href="/"">
+            <button class="button-logout">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+            <h3 class="sidebar-logout">Sair</h3>
+          </a>
+        </div>
     </nav>
 
 
@@ -75,30 +74,6 @@
         </main>
 
       </div>
-    
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const sidebarToggle = document.getElementById("sidebarCollapse");
-          const sidebar = document.getElementById("sidebar");
-          const content = document.getElementById("main-manager");
-          const sidebarTitle = document.querySelector(".sidebar-title");
-          const sidebarEmail = document.querySelector(".sidebar-email");
-          const sidebarLogout = document.querySelector(".sidebar-logout");
-  
-          if (sidebarToggle && sidebar && content) {
-            sidebarToggle.onclick = function() {
-              sidebar.classList.toggle("collapsed");
-              content.classList.toggle("expanded");
-  
-              if (sidebarTitle) {
-                sidebarTitle.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
-                sidebarEmail.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
-                sidebarLogout.style.display = sidebar.classList.contains("collapsed") ? "none" : "block";
-              }
-            };
-          }
-        });
-      </script>
   </body>
 </html>
