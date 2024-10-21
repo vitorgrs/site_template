@@ -1,6 +1,6 @@
 ---
 name: Sarah Johnson
-image: images/photo.jpg
+image: assets/images/logo.svg
 description: Lead Programmer
 role: programmer
 links:

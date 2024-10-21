@@ -1,0 +1,11 @@
+---
+title: Membros
+layout: paginas
+nav:
+  order: 3
+---
+
+{% include list.html data="members" component="membros" filters="role: pi" %}
+{% include list.html data="members" component="membros" filters="role: ^(?!pi$)" %}
+
+
