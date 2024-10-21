@@ -20,6 +20,13 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+}
+.cardProjeto:hover{
+  background-color: var(--amareloprimary);
+  transform: scale(1.05); 
 }
 
 .cardProjeto-link {
@@ -28,8 +35,6 @@
   gap: 20px;
   text-decoration: none;
   color: var(--text);
-  padding: 50px;
-  flex-grow: 1
   
 
 }
@@ -47,15 +52,28 @@
   gap: 20px;
   max-width: 100%;
   padding: 20px;
+
 }
 
-
 .cardProjeto-titulo {
+  text-align: center;
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
+
 }
 
 .cardProjeto-subtitulo {
-  margin-top: -10px !important;
   font-style: italic;
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
+}
+
+.cardProjeto-descricao {
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
 }
