@@ -11,49 +11,72 @@
   | reverse
 %}
 
-{% for year in years %}
-  {% assign data = year.items %}
+{% if include.component == "noticias" %}
+  <section class="noticias">
+{% elsif include.component == "projetos" %}
+  <section class="projetos">
+{% elsif include.component == "membros" %}
+  <section class="membros">
+{% elsif include.component == "publicacoes" %}
+  <section class="publicacoes">
+{% endif %}
 
-  {% if years.size > 1 %}
-    {{--}}<h3 id="{{ year.name }}">{{ year.name }}</h3>
-    {% assign data = data | sort: "date" | reverse %}
-  {% endif %}
+  {% for year in years %}
+    {% assign data = year.items %}
 
-  {% for d in data %}
-    {% assign style = d.style | default: include.style %}
+    <div class="anoecards">
+      <h3 class="ano">{{ year.name }}</h3> 
 
-    {%
-      include {{ include.component | append: ".html" }}
-      affiliation=d.affiliation
-      author=d.author
-      authors=d.authors
-      buttons=d.buttons
-      caption=d.caption
-      content=d.content
-      date=d.date
-      description=d.description
-      excerpt=d.excerpt
-      height=d.height
-      icon=d.icon
-      id=d.id
-      image=d.image
-      last_modified_at=d.last_modified_at
-      link=d.link
-      lookup=d.lookup
-      name=d.name
-      publisher=d.publisher
-      repo=d.repo
-      role=d.role
-      slug=d.slug
-      style=style
-      subtitle=d.subtitle
-      tags=d.tags
-      text=d.text
-      title=d.title
-      tooltip=d.tooltip
-      type=d.type
-      url=d.url
-      width=d.width
-    %}
+      {% if include.component == "noticias" %}
+        <div class="cardsnoticias">
+      {% elsif include.component == "projetos" %}
+        <div class="cardsprojetos">
+      {% elsif include.component == "membros" %}
+        <div class="cardsmembros">
+      {% elsif include.component == "publicacoes" %}
+        <div class="cardspublicacoes">
+      {% endif %}
+
+      {% for d in data %}
+        {% assign style = d.style | default: include.style %}
+        
+        {%
+          include {{ include.component | append: ".html" }}
+          affiliation=d.affiliation
+          author=d.author
+          authors=d.authors
+          buttons=d.buttons
+          caption=d.caption
+          content=d.content
+          date=d.date
+          description=d.description
+          excerpt=d.excerpt
+          height=d.height
+          icon=d.icon
+          id=d.id
+          image=d.image
+          last_modified_at=d.last_modified_at
+          link=d.link
+          lookup=d.lookup
+          name=d.name
+          publisher=d.publisher
+          repo=d.repo
+          role=d.role
+          slug=d.slug
+          style=style
+          subtitle=d.subtitle
+          tags=d.tags
+          text=d.text
+          title=d.title
+          tooltip=d.tooltip
+          type=d.type
+          url=d.url
+          width=d.width
+        %}
+      {% endfor %}
+
+      </div> 
+    </div> 
   {% endfor %}
-{% endfor %}
+
+</section> 
