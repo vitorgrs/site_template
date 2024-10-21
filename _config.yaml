@@ -1,3 +1,4 @@
+
 ### jekyll settings
 
 # front matter defaults
@@ -9,9 +10,9 @@ defaults:
       layout: default
   # markdown files in /_members
   - scope:
-      type: "members"
+      type: "projects"
     values:
-      layout: member
+      layout: projeto
   # markdown files in /_posts
   - scope:
       type: "posts"
