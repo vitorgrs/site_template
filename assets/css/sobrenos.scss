@@ -1,14 +1,7 @@
 ---
 ---
-body {
-      display: flex;
-     
-    
-      min-height: 100vh;
-      margin: 0;
-      background-color: #ffffff;
-    }
-    /* Contêiner para a tabela */
+
+
     .centralizador {
       display: flex;
       justify-content: center;
@@ -37,6 +30,7 @@ body {
       cursor: pointer;
       border-right: 1px solid #ccc;
       background-color: white;
+      font-size: 1rem;
     }
   .menu-item:last-child{
     border-right: none;
@@ -89,7 +83,7 @@ body {
     }
 
    
-    .conteudo {
+    .conteudolinhasdepesquisa {
       max-height: 0;
       opacity: 0;
       overflow: hidden;
