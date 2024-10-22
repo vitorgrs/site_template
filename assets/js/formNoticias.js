@@ -34,42 +34,6 @@ addChipInput.addEventListener('keydown', function(e){
     }
 })
 
-const chipContainer1 = document.querySelector(".chip-container1");
-
-function createChip1(name){
-    const chip1 = document.createElement("div");
-    //chip element
-    chip1.classList.add("chip1")
-    //chip avatar element
-    const chipName1 = document.createElement("div"); 
-    chipName1.classList.add("chipText");
-    chipName1.textContent = name; 
-    const closeIcon1 = document.createElement("div"); 
-    closeIcon1.classList.add("close-icon"); 
-    closeIcon1.textContent = "x"; 
-    closeIcon1.addEventListener( 
-        "click", 
-        function () { 
-            chip1.remove(); 
-        }); 
-    chip1.appendChild(chipName1); 
-    chip1.appendChild(closeIcon1); 
-    chipContainer1.appendChild(chip1);
-}
-
-const addChipInput1 = document.getElementById("addChip1")
-
-addChipInput1.addEventListener('keydown', function(e){
-    if(e.key == 'Enter'){
-        event.preventDefault();
-        const name = addChipInput1.value.trim();
-        if (name !== ""){
-            createChip1(name);
-            addChipInput1.value = "";
-        }
-    }
-})
-
     //TODO: Isso não pode ficar assim
     const apiNotUrl = "http://localhost:3000/submitNoticias";
 
@@ -84,10 +48,8 @@ addChipInput1.addEventListener('keydown', function(e){
             console.log(formData);
 
             const chipsTags = document.getElementsByClassName('chip');
-            const chipsAutor = document.getElementsByClassName('chip1');
             
             var result = Object.keys(chipsTags).map((key) => [chipsTags[key]]);
-            var resultAutor = Object.keys(chipsAutor).map((key) => [chipsAutor[key]]);
             
             //TODO: REFATORAR CÓDIGO
 
@@ -97,14 +59,6 @@ addChipInput1.addEventListener('keydown', function(e){
                 text = text.split(/[\r\n]/g)[0];
                 //data.chip.push(text);
                 formData.append("tags", text);
-            })
-
-            resultAutor.forEach(elem => {
-                text = elem[0]['innerText'];
-                //Regex para lidar com a quebra de linha das tags
-                text = text.split(/[\r\n]/g)[0];
-                //data.chip.push(text);
-                formData.append("autores", text);
             })
 
             console.log(formData);

@@ -31,7 +31,7 @@ textarea{
   position: relative;
 }
 
-.chip-container, .chip-container1 { 
+.chip-container { 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -39,7 +39,7 @@ textarea{
   max-width: 280px;
 } 
 
-.chip, .chip1 { 
+.chip{ 
   display: flex; 
   align-items: center; 
   background-color: #f0f0f0; 
@@ -49,11 +49,11 @@ textarea{
   margin-top: 5px;
 } 
 
-.chipText, .chipText1{
+.chipText{
   margin-left: 10px;
 }
 
-.close-icon, .close-icon1 { 
+.close-icon{ 
   cursor: pointer; 
   margin: 0px 8px; 
   font-weight: bold; 
