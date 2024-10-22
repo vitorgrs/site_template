@@ -3,8 +3,13 @@
   {% include head.html %}
   <body class="body-default">
     {% include header.html %}
-    <main class="main-default">
-      {{ content }}    
+    <main class="main-paginacommenu">
+      <section class="section-menu">
+        <div class="menu"></div>
+      </section>
+      <div class="conteudo-paginamenu">
+        {{ content }}
+      </div>
     </main>
     {% include footer.html %}
   </body>

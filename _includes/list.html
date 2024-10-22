@@ -46,6 +46,7 @@
   <section class="projetos">
     {% include tags.html tags=component_tags %}
     {% include search-info.html %}
+    
 {% elsif include.component == "membros" %}
   <section class="membros">
 {% elsif include.component == "publicacoes" %}
@@ -62,8 +63,11 @@
 
   {% for group in grouped_data %}
     {% assign data = group.items %}
-
-    <div class="anoecards">
+    {% if include.component == "membros" %}
+    <div class="tipoecards section" data-title="{{ group.name }}">
+    {% elsif include.component != "membros" %}
+    <div class="tipoecards">
+    {% endif %}      
       {% if include.component == "noticias" or include.component == "publicacoes" %}
         <h3 class="ano">{{ group.name }}</h3> 
       {% elsif include.component == "projetos" %}
