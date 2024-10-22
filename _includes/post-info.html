@@ -1,5 +1,13 @@
+{% assign postinfo = include %}
+
 <div class="post-info">
-  {% assign published = include.published | date: "%B %d, %Y" %}
+  {% assign published = postinfo.published | date: "%B %d, %Y" %}
+ 
+  {% if postinfo.title %}
+    <h1 class="tituloNoticia">
+      {{ postinfo.title }}
+    </h1>
+  {% endif %}
   {% if published %}
     <span >
       {% include icon.html icon="fa-regular fa-calendar" %}
@@ -7,8 +15,8 @@
     </span>
   {% endif %}
 
-  {% if include.tags %}
-  {% include tags.html tags=include.tags link="blog" %}
+  {% if postinfo.tags %}
+  {% include tags.html tags=postinfo.tags link="blog" %}
   {% endif %}
 
 </div>
