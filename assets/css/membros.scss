@@ -101,7 +101,6 @@ justify-content: center;
 padding: 8px;
 }
 
-
 .icony {
 background-color: white;
 border-radius: 50%; 
@@ -119,12 +118,6 @@ justify-content: center;
   flex-direction: column;
 
 }
-
-//.cardsmembros{
-// display: flex;
-//  flex-direction: row;
-//  gap: 20px;
-//}
 
 .cardmembro {
   display: flex;
@@ -148,8 +141,6 @@ justify-content: center;
   flex: 1;
   justify-content: space-between;
 }
-
-
 
 .cardmembro {
   position: relative;
@@ -283,5 +274,29 @@ justify-content: center;
 }
 
 .cardmembro p {
-  text-align: center;
+  text-align: justify;
+}
+
+.btn-saiba-mais, .btn-saiba-menos {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-saiba-mais:hover, .btn-saiba-menos:hover {
+  background-color: #2980b9;
+}
+
+.linksmembros a img {
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.linksmembros a:hover img {
+  transform: scale(1.1); 
+  filter: brightness(1.3); 
 }

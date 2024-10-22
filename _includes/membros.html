@@ -33,7 +33,9 @@
         {% endif %}
       </div>
     </div>
+    {% if members.description and members.description != "" %}
     <button class="btn-saiba-mais" onclick="flipCard(this)">Ver Mais</button>
+    {% endif %}
   </div>
 
   <!-- Lado traseiro do card (com a descrição) -->

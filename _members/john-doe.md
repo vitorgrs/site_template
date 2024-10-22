@@ -3,7 +3,7 @@ name: John Doe
 image: assets/images/logo.svg
 role: phd
 group: alum
-description: Lorem ipsum dolor sit amet.
+description:
 
 linklattes: https://lattes.cnpq.br/
 linkorcid: https://lattes.cnpq.br/
