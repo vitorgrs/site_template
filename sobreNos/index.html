@@ -27,17 +27,13 @@ nav:
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       background-color: rgb(255, 255, 255);
-      width: 90%;
-      max-width: 799px;
+      width: 1000px;
+      max-width: 999px;
     }
 
     .menu-opcoes {
       display: flex;
       width: 100%;
-    }
-    .border-bot {
-      border-bottom: 1px solid #ccc;
-      transition: border-bottom 2s ease;
     }
 
     .menu-item {
@@ -48,23 +44,25 @@ nav:
       border-right: 1px solid #ccc;
       background-color: white;
     }
-  
+  .menu-item:last-child{
+    border-right: none;
+  }
     .menu-item.item1.active {
-      background-color: rgb(137, 93, 172); 
+      background-color: #7F5A90; 
       color: white;
     }
     .menu-item.item1:hover {
-      background-color: rgb(137, 93, 172); 
+      background-color: #7F5A90; 
       color: white;
       transition: background-color 1.5s ease;
     }
 
     .menu-item.item2.active {
-      background-color: rgb(194, 26, 37);
+      background-color: #C93740;
       color: white; 
     }
     .menu-item.item2:hover {
-      background-color: rgb(194, 26, 37);
+      background-color: #C93740;
       color: white; 
       transition: background-color 1.5s ease;
     }
@@ -112,7 +110,14 @@ nav:
       opacity: 1; /* Torna o conteúdo visível */
       padding: 15px;
     }
-
+    .texto-centralizado {
+      width: 800px; /* Ajuste a largura conforme necessário */
+      margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+      text-align: left; /* Alinha o texto à esquerda */
+      font-size: 18px; /* Tamanho de fonte confortável para leitura */
+      line-height: 1.6; /* Espaçamento de linha para melhorar a legibilidade */
+      padding: 20px; /* Espaçamento interno para um layout mais limpo */
+    }
    
   
 
@@ -126,73 +131,74 @@ nav:
 
 
   <div style="float: left; margin-right: 20px;">
-    <img src="../assets/images/sobrenos/imagempesquisadores.jpg" alt="Pesquisadores do NCA" style="max-width: 450px;">
+    <img src="../assets/images/sobrenos/imagempesquisadores.jpg" alt="Pesquisadores do NCA" style="width: 790px;">
   </div>
-  VIPLAB   - GERALDO/DALLYSSON
-  DEXTER - LUCHO
-  NAO SEIONOME - GLAUBOS
-  LINT - THIAGO
-  <p>O grupo original do NCA (Núcleo de Computação Aplicada) foi primeiramente formado no ano 2000 e consiste 
-    em um Núcleo de Pesquisa e Desenvolvimento da UFMA, propriamente criado pela Resolução 606/2008 CONSEPE-UFMA de 22 de abril de 2008.
-    Localizado no Centro de Ciências Exatas e Tecnologias, o núcleo laboratorial da Universidade, o NCA, agrega em 
-    um mesmo espaço as atividades de 4 laboratórios da UFMA, o  (VIPLAB), de (DEXTER), o de (LINT)
-     e o  (MODAL), que se coordenam para trabalhar juntos nas áreas de processamento e análise de imagens por
-      meio de visão computacional, realidade virtual e aumentada, ciência de dados, inteligência artificial, processamento de linguagem natural, sistemas 
-      de informação e engenharia de software.
-    O Núcleo de Computação Aplicada tem entre seus principais objetivos o desenvolvimento de soluções computacionais que contribuam 
-    para o desenvolvimento social, humano, industrial e econômico da região/país; e a formação de recursos humanos de alto nível (Grad/MSc/DSc).
-    O NCA, dispõe de prédio próprio e além dos pesquisadores do grupo principal temos a participação de alunos da graduação (engenharia 
-    da computação, ciência da computação, engenharia elétrica e Design), mestrado (Ciência da Computação e Engenharia Elétrica) e doutorado 
-    (Ciência da Computação e Engenharia Elétrica).  
-  </p>
-  <p style="clear: both; text-align: left; margin-top: 20px;">
-  O resultado do trabalho para que em suas instalações o Núcleo trouxesse todas as condições necessárias ao desenvolvimento de pesquisas teve a coordenação dos professores Anselmo Paiva, Aristófanes Corrêa e Mário Meireles, que já vem trabalhando neste projeto desde 2008. A implantação do NCA insere a UFMA na rede temática de Computação Científica e Visualização, conhecida como rede Galileu, criada em 2006, que integra universidades de todo o país, como USP, PUC e Universidade Federal do Rio de Janeiro. Estas Universidades, e agora a UFMA, estão em parceria com a empresa Petrobrás para desenvolver tecnologias e recursos humanos de alto nível, proporcionados após o investimento da empresa brasileira de Petróleo, que já destinou para o Núcleo avançado da  Núcleo de Computação Aplicada é inaugurado na UFMA UFMA cerca de 1,5 milhões de reais.</p>
-
-  <p style="text-align: center;">
-    O Núcleo de Computação Aplicada acredita que a oportunidade de desenvolver suas pesquisas em um moderno e equipado núcleo de computação vai permitir que ele e outros jovens cientistas entrem em contato com pesquisas de altíssima tecnologia, provendo uma experiência essencial na vida acadêmica e impulsionando sua formação tanto acadêmica quanto pessoal, além de fomentar o aumento de projetos nesta área.
-  </p>
-
+  <div class="texto-centralizado">
+    <h2>História</h2>
+      <p>O grupo original do NCA (Núcleo de Computação Aplicada) foi primeiramente formado no ano 2000 e consiste em um Núcleo de Pesquisa e Desenvolvimento da UFMA, propriamente criado pela Resolução 606/2008 CONSEPE-UFMA de 22 de abril de 2008.
+      Localizado no Centro de Ciências Exatas e Tecnologias, o núcleo laboratorial da Universidade, o NCA, agrega em um mesmo espaço as atividades de 4 laboratórios da UFMA, o  (VIPLAB), de (DEXTER), o de (LINT)
+      e o  (MODAL), que se coordenam para trabalhar juntos nas áreas de processamento e análise de imagens por meio de visão computacional, realidade virtual e aumentada, ciência de dados, inteligência artificial, processamento de linguagem natural, sistemas 
+        de informação e engenharia de software.
+      O Núcleo de Computação Aplicada tem entre seus principais objetivos o desenvolvimento de soluções computacionais que contribuam para o desenvolvimento social, humano, industrial e econômico da região/país; e a formação de recursos humanos de alto nível (Grad/MSc/DSc).
+      O NCA, dispõe de prédio próprio e além dos pesquisadores do grupo principal temos a participação de alunos da graduação (engenharia da computação, ciência da computação, engenharia elétrica e Design), mestrado (Ciência da Computação e Engenharia Elétrica) e doutorado 
+      (Ciência da Computação e Engenharia Elétrica).  
+    </p>
+    <h2>Estrutura</h2>
+    <p style="clear: both; text-align: left; margin-top: 20px;">
+    O resultado do trabalho para que em suas instalações o Núcleo trouxesse todas as condições necessárias ao desenvolvimento de pesquisas teve a coordenação dos professores Anselmo Paiva, Aristófanes Corrêa e Mário Meireles,
+     que já vem trabalhando neste projeto desde 2008. A implantação do NCA insere a UFMA na rede temática de Computação Científica e Visualização, conhecida como rede Galileu, criada em 2006, que integra universidades de todo o país, como USP, PUC e Universidade 
+     Federal do Rio de Janeiro. Estas Universidades, e agora a UFMA, estão em parceria com a empresa Petrobrás para desenvolver tecnologias e recursos humanos de alto nível, proporcionados após o investimento da empresa brasileira de Petróleo, que já destinou para o Núcleo
+      avançado da  Núcleo de Computação Aplicada é inaugurado na UFMA UFMA cerca de 1,5 milhões de reais.</p>
+      <h2>Objetivos</h2>
+    <p>
+      O Núcleo de Computação Aplicada acredita que a oportunidade de desenvolver suas pesquisas em um moderno e equipado
+       núcleo de computação vai permitir que ele e outros jovens cientistas entrem em contato com pesquisas de altíssima tecnologia,
+        provendo uma experiência essencial na vida acadêmica e impulsionando sua formação tanto acadêmica quanto pessoal, paralelamente fomentando
+        o aumento de projetos nesta área.
+    </p>
+    <h2>Parcerias</h2>
+</div>
 
   
 
   
-  <h1>Tabela Dinâmica de Linhas de Pesquisa</h1>
+  <h1>Linhas de Pesquisa</h1>
   <div class="centralizador">
-    <div id= "tabela" class="tabela-dinamica" style="background-color: rgb(137, 93, 172);">
+    <div id= "tabela" class="tabela-dinamica" style="background-color: #7F5A90;">
       <div class="menu-opcoes">
         <div class="menu-item item1 active" onclick="mostrarConteudo(0)">
-          <i class="fa-solid fa-qrcode" style="font-size: 40px; color: rgb(137, 93, 172); padding: 10px; border-radius: 50%; 
+          <i class="fa-solid fa-qrcode" style="font-size: 40px; color: #7F5A90; padding: 10px; border-radius: 50px; 
            background-color: #f7f7f7; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;"></i></i>
           <p >Visão Computacional</p>
         </div>
-        <div class="menu-item item2 border-bot" onclick="mostrarConteudo(1)">
-          <i class="fa-solid fa-terminal" style="font-size: 40px; color: rgb(194, 26, 37); padding: 10px; border-radius: 50%; 
+        <div class="menu-item item2 " onclick="mostrarConteudo(1)">
+          <i class="fa-solid fa-terminal" style="font-size: 40px; color: #C93740; padding: 10px; border-radius: 50px; 
            background-color: #f7f7f7; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;"></i></i>
           <p >Ciência de Dados</p>
         </div>
-        <div class="menu-item item3 border-bot" onclick="mostrarConteudo(2)">
-          <i class="fa-solid fa-cubes" style="font-size: 40px; color: rgb(228, 156, 65); padding: 10px; border-radius: 50%; 
+        <div class="menu-item item3 " onclick="mostrarConteudo(2)">
+          <i class="fa-solid fa-cubes" style="font-size: 40px; color: rgb(228, 156, 65); padding: 10px; border-radius: 50px; 
            background-color: #f7f7f7; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;"></i>
           <p >Realidade Virtual e Aumentada</p>
         </div>
-        <div class="menu-item item4 border-bot" onclick="mostrarConteudo(3)">
-          <i class="fa-solid fa-sitemap" style="font-size: 40px; color: #1f4570; padding: 10px; border-radius: 50%; 
+        <div class="menu-item item4 " onclick="mostrarConteudo(3)">
+          <i class="fa-solid fa-sitemap" style="font-size: 40px; color: #1f4570; padding: 10px; border-radius: 50px; 
            background-color: #f7f7f7; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;"></i>
           <p >Inteligência Artificial</p>
         </div>
-        <div class="menu-item item5 border-bot" onclick="mostrarConteudo(4)">
-          <i class="fa-solid fa-microchip" style="font-size: 40px; color: rgb(120, 123, 157); padding: 10px; border-radius: 50%; 
+        <div class="menu-item item5 " onclick="mostrarConteudo(4)">
+          <i class="fa-solid fa-microchip" style="font-size: 40px; color: rgb(120, 123, 157); padding: 10px; border-radius: 50px; 
            background-color: #f7f7f7; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: all 0.3s ease;"></i></i>
           <p >Processamento de Linguagem</p>
         </div>
       </div>
   
-      <div id="conteudo0" class="conteudo active" style="color: white;background-color: rgb(137, 93, 172);">
+      <div id="conteudo0" class="conteudo active" style="color: white;background-color: #7F5A90;">
         <p>A Visão Computacional é o processo de modelagem e replicação da visão humana usando software e hardware, é a área da computação responsável por reconhecer e interpretar imagens. Nesse sentido, utiliza-se de aprendizado de máquina e redes neurais para seus objetivos. Pode ser aplicada em diferentes áreas contextos, tais como; detecção e diagnóstico de câncer; diagnóstico e planejamento cirúrgico de Estrabismo; Processamento de Vídeos de segurança; Processamento de dados Sísmicos; etc. A visão computacional está na vanguarda da revolução tecnológica, transformando a maneira como interagimos com o mundo visual. Seus avanços têm impulsionado uma ampla gama de aplicações em vários contextos no mundo atual, daí a importância de haver pesquisa e desenvolvimento nessa área
         </p>
       </div>
   
-      <div id="conteudo1" class="conteudo" style="color: white;background-color:  rgb(194, 26, 37)">
+      <div id="conteudo1" class="conteudo" style="color: white;background-color:  #C93740">
         <p>A Ciência de Dados (Data Science) é um campo interdisciplinar que integra métodos científicos, processos, algoritmos e sistemas para extrair conhecimento e insights de dados estruturados e não estruturados. Esse campo envolve o uso de diversas técnicas provenientes de áreas como matemática, estatística, ciência da computação e conhecimentos específicos de domínios variados, com o objetivo de analisar e interpretar grandes conjuntos de dados.Além disso, destaca-se por seu enfoque em transformar dados brutos em informações úteis e acionáveis, utilizando uma abordagem sistemática para explorar padrões, tendências e relações que podem não ser facilmente detectadas a olho nu. 
         </p>
       </div>
@@ -226,7 +232,7 @@ nav:
     var tabela = document.getElementById('tabela')
     menuItens.forEach(function(item) {
       item.classList.remove('active');
-      item.classList.add('border-bot');
+      
     });
 
     conteudos.forEach(function(conteudo) {
@@ -235,7 +241,7 @@ nav:
 
     // Adiciona a classe 'active' ao item e conteúdo correspondente
     menuItens[index].classList.add('active');
-    menuItens[index].classList.remove('border-bot');
+ 
     conteudos[index].classList.add('active');
     tabela.style.backgroundColor = conteudos[index].style.backgroundColor;
   }
