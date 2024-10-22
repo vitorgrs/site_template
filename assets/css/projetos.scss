@@ -20,15 +20,10 @@
   flex-grow: 1; /* Faz os cards crescerem igualmente */
   border-radius: 20px;
   overflow: hidden;
-  height: 600px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   transition: transform 0.3s ease;
 
-}
-.cardProjeto:hover{
-  background-color: var(--amareloprimary);
-  transform: scale(1.05); 
 }
 
 .cardProjeto-link {
@@ -36,6 +31,7 @@
   flex-direction: column;
   gap: 20px;
   text-decoration: none;
+  width: 100%;
   color: var(--text);
   
 
