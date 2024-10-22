@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  width: 100%;
   margin: 0;
 }
 
@@ -14,13 +15,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px; 
-  max-width: calc(100% - 20px - 20px);
+  max-width: calc(33.33% - 60px);
   margin: 0;
+  flex-grow: 1; /* Faz os cards crescerem igualmente */
   border-radius: 20px;
   overflow: hidden;
   height: 600px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+}
+.cardProjeto:hover{
+  background-color: var(--amareloprimary);
+  transform: scale(1.05); 
 }
 
 .cardProjeto-link {
@@ -29,7 +37,6 @@
   gap: 20px;
   text-decoration: none;
   color: var(--text);
-  padding: 50px;
   
 
 }
@@ -49,15 +56,28 @@
   gap: 20px;
   max-width: 100%;
   padding: 20px;
+
 }
 
-
 .cardProjeto-titulo {
-  align-items: center;
+  text-align: center;
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
+
 }
 
 .cardProjeto-subtitulo {
   font-style: italic;
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
+}
+
+.cardProjeto-descricao {
+  text-decoration: none;
+  margin: 0;
+  color: var(--body);
 }

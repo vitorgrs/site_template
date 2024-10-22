@@ -118,7 +118,13 @@ linkedin:
   icon: fa-brands fa-linkedin
   text: LinkedIn
   tooltip: LinkedIn
-  link: https://www.linkedin.com/in/$VALUE
+  link: $VALUE  # Isso mantém o link como está no YAML
+
+google-maps:  
+  icon: fa-solid fa-map-marker  
+  text: Google Maps
+  tooltip: Google Maps
+  link: $VALUE  
 
 # alerts
 

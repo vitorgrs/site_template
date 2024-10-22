@@ -6,38 +6,60 @@
       {% assign title = post.title %}
       {% assign image = post.image %}
 
-      {% if image %}
-          <img
-            src="{{ image | relative_url }}"
-            alt="{{ title | default: "excerpt image" }}"
+      <a
+        href="{{ url | relative_url }}"
+        class="cardnoticia-link "
+      >
+
+        {% if image %}
+            <img
+              src="{{ image | relative_url }}"
+              alt="{{ title | default: "excerpt image" }}"
+              class="cardnoticia-imagem "
+            >
+        {% endif %}
+      </a>
+      
+        <div class="cardnoticiatext">
+          <a
+            href="{{ url | relative_url }}"
+            class="cardnoticia-link "
           >
-      {% endif %}
+            <h1 class="cardnoticia-titulo">
+              {{ post.title }}
+            </h1>
+          </a>
+          
 
-      <div class="cardnoticiatext">
+          {% assign excerpt = post.content
+            | default: ""
+            | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
+            | default: post.excerpt
+            | default: ""
+            | strip_html
+          %}
+          {% assign search = post.content
+            | strip_html 
+            | strip_newlines
+            | regex_strip
+          %}
+            <a
+              href="{{ url | relative_url }}"
+              class="cardnoticia-link "
+            >
+              <p data-search="{{ search }}" class="cardnoticia-descricao">
+                {{ excerpt }}
+              </p>
+            </a>
+          {%
+            include post-info.html
+            tags=post.tags
+          %}
+          {%
+            include post-info.html
+            published=post.date
+          %}
 
-        {%
-          include post-info.html
-          tags=post.tags
-        %}
-
-        {% assign excerpt = post.content
-          | default: ""
-          | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
-          | default: post.excerpt
-          | default: ""
-          | strip_html
-        %}
-        {% assign search = post.content
-          | strip_html 
-          | strip_newlines
-          | regex_strip
-        %}
-        <p data-search="{{ search }}">
-          {{ excerpt }}
-        </p>
-        {%
-          include post-info.html
-          published=post.date
-        %}
-      </div>
+        </div>
+      
   </div> 

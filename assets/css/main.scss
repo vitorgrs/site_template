@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap:30px
+  gap:50px
 }
 .main-manager {
   background-color: var(--white);            
@@ -15,12 +15,23 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
   height: 95vh;
 }
-.anoecards{
+
+.main-paginacommenu {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.conteudo-paginamenu{
+  display: flex;
+  flex-direction: column;
+}
+.tipoecards{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
-.ano{
+.titulosecao{
   text-align: left;
   margin: 0;
 }
@@ -59,3 +70,4 @@
   padding: 0 10%;
   gap:30px
 }
+
