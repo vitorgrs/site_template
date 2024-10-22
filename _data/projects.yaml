@@ -29,17 +29,6 @@
   tags:
     - Inteligencia artificial
     - Visão computacional 
-            
-- title: Sistema Ergotech
-  subtitle: Avaliação Postural em situações laboratoriais
-  image: assets/images/projetos/Ergotech.png
-  link: https://github.com/
-  description: Neset projeto, desenvolemos um aplicativo(Ergotech) que obtém uma avaliação postural, através de modelos de visão computacional e inteligencia artificial, com o intuito de identificar, analisar e documentar fatores de riscos ergonômicos em atividades laborais.
- 
-  tags:
-    - Inteligencia artificial 
-    - Visão computacional
-    - Realidade Aumentada
 
 - title: Projeto TCE
   subtitle: Projeto de P&D com o TCE para Inteligencia Computacional no Apoio às Ações de Controle Externo
