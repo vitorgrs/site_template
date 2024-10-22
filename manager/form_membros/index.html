@@ -8,14 +8,29 @@ layout: manager
 <form id="form_membro" onsubmit="return false" enctype="multipart/form-data">
 
     <div id="form_fields">
-        <label for="titulo" class="labelName">Título </label>
-        <input type="text" name="proj_titulo" id="titulo" required placeholder="Insira seu título aqui" />
+        <label for="nomeMembro" class="labelName">Nome</label>
+        <input type="text" name="nome_membro" id="nomeMembro" required placeholder="Insira seu nome completo aqui" />
         
-        <label for="subtitulo" class="labelName">Subtítulo </label>
-        <input type="text" name="proj_subtitulo" id="subtitulo" required placeholder="Insira seu subtítulo aqui"/>
+        <label for="cargo" class="labelName">Cargo</label>
+        <select name="cargo_membro" id="cargo" required>
+            <option value="" disabled selected hidden>Selecione seu cargo aqui</option>
+            <option value="Professor">Professor</option>
+            <option value="Aluno">Aluno</option>
+            <option value="Ex-Aluno">Ex-Aluno</option>
+        </select>
 
-        <label for="grupo_projeto" class="labelName">Grupo</label>
-        <input list="grupos" id="grupo" name="grupo_projeto" placeholder="Selecione seu grupo">
+        <label for="afiliacao" class="labelName">Afiliação</label>
+        <select name="afiliacao" id="afiliacao" required>
+            <option value="" disabled selected hidden>Selecione sua afiliação aqui</option>
+            <option value="DEINF">DEINF</option>
+            <option value="Dep. Engenharia da Computação">Departamento Engenharia da Computação</option>
+            <option value=""></option>
+        </select>
+
+
+
+        <label for="inputLattes" class="labelName">Grupo</label>
+        
         
         <label for="filefoto" class="labelName" id="labelFoto">Imagem</label>
         <input type="file" name="filefoto" id="filefoto" accept="image/*">
@@ -42,6 +57,7 @@ layout: manager
         <option value="NCA"></option>
         <option value="Equatorial"></option>
     </datalist>
+
 </form>
 
-<script src="../assets/js/formProjeto.js"></script>
+<script src="../../assets/js/formProjeto.js"></script>
