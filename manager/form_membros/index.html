@@ -24,28 +24,26 @@ layout: manager
             <option value="" disabled selected hidden>Selecione sua afiliação aqui</option>
             <option value="DEINF">DEINF</option>
             <option value="Dep. Engenharia da Computação">Departamento Engenharia da Computação</option>
-            <option value=""></option>
+            <option value="Sem Filiação">Sem Filiação</option>
         </select>
 
 
 
-        <label for="inputLattes" class="labelName">Grupo</label>
-        
-        
-        <label for="filefoto" class="labelName" id="labelFoto">Imagem</label>
-        <input type="file" name="filefoto" id="filefoto" accept="image/*">
-        
-
-        <label for="link_projeto" class="labelName">Link do projeto</label>
-        <input type="text" name="link_projeto" id = "link_input" placeholder="https://github.com/...">
+        <label for="inputLattes" class="labelName">Curriculo Lattes</label>
+        <div id="lattesDiv">
+            <span>https://lattes.cnpq.br/</span>
+            <input type="text" id="inputLattes" name="id_lattes" required placeholder="Coloque o seu ID aqui">
+        </div>
         
 
-        <label for="desc_projeto" class="labelName">Descrição</label>
-        <textarea name="desc_projeto" id="txt_desc_proj"></textarea>
+        <label for="emailMembro" class="labelName">E-mail</label>
+        <input type="email" name="email_membro" id = "emailMembro" placeholder="Insire seu e-mail aqui">
+        
 
-        <label for="chip_projeto" class="labelName">Tags</label>
-        <input type="text" name="chip" id="addChip" placeholder="Ex: Machine Learning, PLN">
-        <div class="chip-container"></div>
+        <label for="descMembro" class="labelName">Descrição</label>
+        <textarea name="desc_membro" id="descMembro" placeholder="Insira uma breve descrição ou biografia aqui"></textarea>
+
+
 
         <div class="buttonRow">
             <button type="button" class="cancelarButton">Cancelar</button>
@@ -53,10 +51,6 @@ layout: manager
         </div>
     </div>
 
-    <datalist id="grupos">
-        <option value="NCA"></option>
-        <option value="Equatorial"></option>
-    </datalist>
 
 </form>
 
