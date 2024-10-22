@@ -9,14 +9,14 @@ defaults:
       layout: default
   # markdown files in /_members
   - scope:
-      type: "members"
+      type: "projects"
     values:
       layout: member
   # markdown files in /_posts
   - scope:
       type: "posts"
     values:
-      layout: post
+      layout: noticia
 
 
 

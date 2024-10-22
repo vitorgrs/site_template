@@ -6,38 +6,47 @@
       {% assign title = post.title %}
       {% assign image = post.image %}
 
-      {% if image %}
-          <img
-            src="{{ image | relative_url }}"
-            alt="{{ title | default: "excerpt image" }}"
-          >
-      {% endif %}
+      <a
+      href="{{ url | relative_url }}"
+      >
 
-      <div class="cardnoticiatext">
+        {% if image %}
+            <img
+              src="{{ image | relative_url }}"
+              alt="{{ title | default: "excerpt image" }}"
+            >
+        {% endif %}
 
-        {%
-          include post-info.html
-          tags=post.tags
-        %}
+        <div class="cardnoticiatext">
+          {%
+            include post-info.html
+            title=post.title
+          %}
 
-        {% assign excerpt = post.content
-          | default: ""
-          | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
-          | default: post.excerpt
-          | default: ""
-          | strip_html
-        %}
-        {% assign search = post.content
-          | strip_html 
-          | strip_newlines
-          | regex_strip
-        %}
-        <p data-search="{{ search }}">
-          {{ excerpt }}
-        </p>
-        {%
-          include post-info.html
-          published=post.date
-        %}
-      </div>
+          {%
+            include post-info.html
+            tags=post.tags
+          %}
+
+          {% assign excerpt = post.content
+            | default: ""
+            | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
+            | default: post.excerpt
+            | default: ""
+            | strip_html
+          %}
+          {% assign search = post.content
+            | strip_html 
+            | strip_newlines
+            | regex_strip
+          %}
+          <p data-search="{{ search }}">
+            {{ excerpt }}
+          </p>
+          {%
+            include post-info.html
+            published=post.date
+          %}
+        </div>
+      </a>
   </div> 
