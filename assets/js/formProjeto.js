@@ -35,7 +35,7 @@ const chipContainer = document.querySelector(".chip-container");
     })
 
     //TODO: Isso não pode ficar assim
-    const apiProjUrl = "http://localhost:3000/submit";
+    const apiProjUrl = "http://localhost:3000/submitProjeto";
 
 
     formProjeto = document.getElementById("form_projeto");
