@@ -1,11 +1,15 @@
 ---
 layout: default
 ---
+
 {% include headerpagina.html
   background_image=page.background_image
-  show_search= page.show_search
-  show_post_info= pageshow_post_info
-  image=page.image %}
+  show_search=page.show_search
+  show_post_info=page.show_post_info
+  imageheader=page.image
+%}
+
+<p>Valor da variável show_search: {{ page.show_search }}</p>
+<p>Valor da variável show_post_info: {{ page.show_post_info }}</p>
 
 {{ content }}
-

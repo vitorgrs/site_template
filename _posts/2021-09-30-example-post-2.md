@@ -1,6 +1,6 @@
 ---
 title: Example post 2
-image: assets/images/sobrenos/imagempesquisadores.jpg
+image: /assets/images/sobrenos/imagempesquisadores.jpg
 
 ---
 

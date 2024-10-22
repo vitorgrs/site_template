@@ -8,20 +8,27 @@
 
       <a
       href="{{ url | relative_url }}"
+      class="cardnoticia-link "
+
       >
 
         {% if image %}
             <img
               src="{{ image | relative_url }}"
               alt="{{ title | default: "excerpt image" }}"
+              class="cardnoticia-imagem "
             >
         {% endif %}
 
         <div class="cardnoticiatext">
-          {%
-            include post-info.html
-            title=post.title
-          %}
+          <a
+            href="{{ url | relative_url }}"
+            class="cardnoticia-link "
+          >
+            <h1 class="cardnoticia-titulo">
+              {{ post.title }}
+            </h1>
+          </a>
 
           {%
             include post-info.html
@@ -40,13 +47,18 @@
             | strip_newlines
             | regex_strip
           %}
-          <p data-search="{{ search }}">
+          <a
+          href="{{ url | relative_url }}"
+          class="cardnoticia-link "
+        >
+          <p data-search="{{ search }}" class="cardnoticia-descricao">
             {{ excerpt }}
           </p>
-          {%
-            include post-info.html
-            published=post.date
-          %}
+        </a>
+      {%
+        include post-info.html
+        tags=post.tags
+      %}
         </div>
       </a>
   </div> 

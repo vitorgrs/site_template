@@ -1,26 +1,19 @@
 ---
-layout: default
+layout: paginas
+show_search: true
+show_post_info: true
+background_image: "../assets/images/fundos/fundoneutro.svg"
 ---
-{% assign image = page.image %}
 
-<section class="headerPaginaNoticia">
-  <h1 class="tituloPaginaNoticia">{{ page.title}}</h1>
-  {%
-    include post-info.html
-    published=page.date
-    tags=page.tags
-  %}
-    
-</section>
 
 <div class="DivImagemNoticia">
-{% if image %}
-    <img class="ImagemDaNoticia"
-      src="{{ image | relative_url }}"
-      alt="{{ title | default: "excerpt image" }}"
-    >
-{% endif %}
+  {% include post-info.html imagem=page.image %}
+
 </div>
+
+
+
+  
 
 <div class="InformacoesDebaixoImagem">
   {{ content }}

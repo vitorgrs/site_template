@@ -1,5 +1,6 @@
 
 ### jekyll settings
+baseurl: ""
 
 # front matter defaults
 defaults:
@@ -39,6 +40,9 @@ plugins:
 
 # code block syntax highlighting
 highlighter: rouge
+
+permalink: /:title/
+
 
 # jekyll theme
 theme: null
