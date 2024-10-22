@@ -1,13 +1,14 @@
+---
+---
+
 #pesquisa{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    padding: 10px;
 }
 
-h1#teste{
-    color: aqua;
-}
+
 
 #legenda{
     display: flex;
