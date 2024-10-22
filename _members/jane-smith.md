@@ -6,6 +6,7 @@ affiliation: University of Colorado
 aliases:
   - J. Smith
   - J Smith
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus purus in massa tempor nec feugiat nisl pretium fusce. Elit at imperdiet dui accumsan. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi.
 linklattes: https://lattes.cnpq.br/
 linkorcid: https://lattes.cnpq.br/
 linklinkedin: https://lattes.cnpq.br/
