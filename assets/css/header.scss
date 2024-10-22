@@ -107,8 +107,8 @@ header a {
   transition: all 0.3s ease;
 }
 
-#projetos.active::after,
-#projetos:hover::after {
+#publicacoes.active::after,
+#publicacoes:hover::after {
   content: "";
   position: absolute;
   left: 0;
@@ -119,8 +119,8 @@ header a {
   transition: all 0.3s ease;
 }
 
-#publicacoes.active::after,
-#publicacoes:hover::after {
+#projetos.active::after,
+#projetos:hover::after {
   content: "";
   position: absolute;
   left: 0;

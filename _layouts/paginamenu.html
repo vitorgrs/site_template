@@ -4,12 +4,19 @@
   <body class="body-default">
     {% include header.html %}
     <main class="main-paginacommenu">
-      <section class="section-menu">
-        <div class="menu"></div>
+      {% include headerpagina.html
+        background_image=page.background_image
+        show_search= page.show_search
+        show_post_info= pageshow_post_info
+        image=page.image %}
+      <section class="conteudo">
+        <div class="section-menu">
+          <div class="menu"></div>
+        </div>
+        <div class="conteudo-paginamenu">
+          {{ content }}
+        </div>
       </section>
-      <div class="conteudo-paginamenu">
-        {{ content }}
-      </div>
     </main>
     {% include footer.html %}
   </body>

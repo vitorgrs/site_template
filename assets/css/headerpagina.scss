@@ -9,15 +9,25 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  min-height: 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
 .tituloPagina{
   text-align: center;
   color: var(--white);
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   margin: 0;
 }
 
-
+.barradepesquisa{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
 

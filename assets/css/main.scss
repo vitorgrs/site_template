@@ -18,8 +18,11 @@
 
 .main-paginacommenu {
   display: flex;
+  flex-direction: column;
+}
+.conteudo{
+  display: flex;
   flex-direction: row;
-  flex-grow: 1;
 }
 .conteudo-paginamenu{
   display: flex;

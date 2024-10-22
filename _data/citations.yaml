@@ -171,6 +171,22 @@
   orcid: 0000-0002-4655-3773
   plugin: orcid.py
   file: orcid.yaml
+- id: doi:10.1371/journal.pcbi.1007128
+  title: Open collaborative writing with Manubot
+  authors:
+  - Daniel S. Himmelstein
+  - Vincent Rubinetti
+  - David R. Slochower
+  - Dongbo Hu
+  - Venkat S. Malladi
+  - Casey S. Greene
+  - Anthony Gitter
+  publisher: PLOS Computational Biology
+  date: '2019-06-24'
+  link: https://doi.org/c7np
+  orcid: 0000-0002-4655-3773
+  plugin: orcid.py
+  file: orcid.yaml
 - id: doi:10.1101/573782
   title: Sequential compression of gene expression across dimensionalities and methods
     reveals no single best method or dimensionality

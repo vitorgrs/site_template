@@ -40,8 +40,10 @@
 }
 
 .cardProjeto-imagem {
+  max-height: 250px;
   object-fit: cover;
   width: 100%;
+
 }
 
 .cardProjeto-texto {

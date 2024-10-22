@@ -27,10 +27,34 @@
   justify-content: center;
   align-items: center;
   text-align: left;
+
 }
+
 
 .text-block {
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.text-block > h1{
+  font-size: 3rem;
+  margin: 0;
+}
+.text-block > p{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-primary{
+  background-color: var(--amarelosecondary);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--white);
+  max-width: 160px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .image-block img {
@@ -122,11 +146,24 @@
 
 
 .laboratorios{
-  padding: 0 10%;
+  padding: 20px 10%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  }
+  
+.laboratorios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--roxoprimary);
+  opacity: 0.15; 
+  z-index: -1; 
 }
-
 .cardslaboratorios {
   display: flex;
   flex-direction: row;
@@ -152,11 +189,28 @@
 }
 
 .parcerias{
-  padding: 0 10% 0 10%;
+  padding: 20px 10% 50px 10%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -50px;
 }
 
+.parcerias::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: var(--roxoprimary);
+opacity: 0.15; 
+z-index: -1; 
+}
+.parcerias > h2{
+  margin: 0;  
+}
 .logosparcerias {
   display: flex;
   flex-wrap: wrap; 
