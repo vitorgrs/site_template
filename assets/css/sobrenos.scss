@@ -1,7 +1,16 @@
 ---
 ---
-
-
+.InformacoesPricipais{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 10% 0 10%
+}
+.linhasdepesquisa{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
     .centralizador {
       display: flex;
       justify-content: center;
@@ -93,18 +102,24 @@
       transition: opacity 2s ease;
     }
 
-    .conteudo.active {
+    .conteudolinhasdepesquisa.active {
       max-height: fit-content; /* Define a altura máxima quando o conteúdo estiver visível */
       opacity: 1; /* Torna o conteúdo visível */
       padding: 15px;
     }
     .texto-centralizado {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       width: 800px; /* Ajuste a largura conforme necessário */
       margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-      text-align: left; /* Alinha o texto à esquerda */
+      text-align: justify; /* Alinha o texto à esquerda */
       font-size: 18px; /* Tamanho de fonte confortável para leitura */
       line-height: 1.6; /* Espaçamento de linha para melhorar a legibilidade */
-      padding: 20px; /* Espaçamento interno para um layout mais limpo */
+    }
+    .texto-centralizado > *{
+        margin: 0;
+
     }
    
   
