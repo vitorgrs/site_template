@@ -1,25 +1,39 @@
-var firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+// Importa o Firebase core e o módulo de autenticação
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import { getAuth, setPersistence, browserLocalPersistence, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+// Configuração do Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBBvTjR8Kmbv-lhuSy6H7YiaDjQAf4cVLQ",
+  authDomain: "sitenca-c7704.firebaseapp.com",
+  projectId: "sitenca-c7704",
+  storageBucket: "sitenca-c7704.appspot.com",
+  messagingSenderId: "279609614229",
+  appId: "1:279609614229:web:75bf6fda61bee779a4e09c"
 };
-firebase.initializeApp(firebaseConfig);
 
-// Configurando a persistência LOCAL
-firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-  .then(function() {
-    // Após definir a persistência, tente o login
-    return firebase.auth().signInWithPopup(provider);  // Exemplo com Google
+// Inicializa o Firebase
+const app = initializeApp(firebaseConfig);
+
+// Inicializa o módulo de autenticação
+const auth = getAuth(app);
+
+// Configura a persistência LOCAL para manter o login após atualizar a página
+setPersistence(auth, browserLocalPersistence)
+  .then(() => {
+    // Define o provedor de autenticação (Google)
+    const provider = new GoogleAuthProvider();
+    
+    // Tenta o login com o popup do Google
+    return signInWithPopup(auth, provider);
   })
-  .catch(function(error) {
-    // Lida com erros de persistência
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.error("Error: ", errorCode, errorMessage);
+  .then((result) => {
+    // Sucesso no login
+    console.log("Usuário logado: ", result.user);
+  })
+  .catch((error) => {
+    // Lida com erros de autenticação
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.error("Erro ao tentar logar: ", errorCode, errorMessage);
   });
-
-
-
