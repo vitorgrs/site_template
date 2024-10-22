@@ -1,33 +1,32 @@
-- title: CEMAR-CELPA/ANEEl
+- title: P&D CEMAR-CELPA/ANEEl
   subtitle: Projeto em P&D para a CEMAR-CELPA/ANEL com foco em inteligencia artificial e Sistemas de Informações geográficas 
   group: featured
   image: assets/images/projetos/Cemar-Celpa.png
   link: https://github.com/
   description: O projeto P&D com a CEMAR-CELPA/ANEEL visa desenvolver soluções inovadoras utilizando inteligência computacional e sistemas de informação geográfica (SIG) para otimizar a medição e gestão do consumo de energia elétrica. Por meio de técnicas avançadas como Deep Learning e Survival Analysis, o projeto busca aprimorar a precisão e eficiência dos parâmetros de medição de energia elétrica.
-
-  repo: greenelab/lab-website-template
   tags:
-    - resource
+    - inteligencia artificial
+    - SIG
 
-- title: Equatorial Energia
+- title: P&D Equatorial Energia
   subtitle: Projeto em conjunto com a Equatorial para pesquisa e desenvolvimento em inteligencia artificial e ciência de dados 
   group: featured
   image: assets/images/projetos/Equatorial.png
   link: https://github.com/
   description: O projeto P&D com a Equatorial Energia busca pesquisar, desenvolver e inovar soluções utilizando inteligência artificial e computacional, com o objetivo de fomentar a pesquisa e o avanço científico no Maranhão. As soluções utilizam processamento de imagens e tecnologias avançadas para oferecer maior precisão e autonomia aos usuários.
-  repo: greenelab/lab-website-template
+ 
   tags:
-    - resource
+    - Inteligencia Artificial
+    - Ciência de dados
 
 - title: P&D Petrobras
   subtitle: Projeto em conjunto com a Petrobras para pesquisa e desenvolvimento em inteligencia artificial e ciência de dados 
   group: featured
   image: assets/images/projetos/Petrobras.jpg
   link: https://github.com/
-  description: Neste projeto P&D com a Petrobras, desenvolvemos um sistema para classificação de rochas digitais com base em similaridade. A partir de um banco de dados de imagens de rochas e uma imagem de referência, o sistema identifica as imagens mais similares, aplicando técnicas avançadas de inteligência computacional. O objetivo desse projeto não é somente construir uma solução tecnológica, é também aprimorar o conhechecimento a respeito das rochas digitais e suas segmentações.
-  repo: greenelab/lab-website-template
+  description: Neste projeto P&D com a Petrobras, desenvolvemos um sistema para classificação de rochas digitais com base em similaridade. A partir de um banco de dados de imagens de rochas e uma imagem de referência, o sistema identifica as imagens mais similares, aplicando técnicas avançadas de inteligência computacional.
+  
   tags:
-    - Petrobras
     - Inteligencia artificial
     - Visão computacional 
             
@@ -36,54 +35,20 @@
   image: assets/images/projetos/Ergotech.png
   link: https://github.com/
   description: Neset projeto, desenvolemos um aplicativo(Ergotech) que obtém uma avaliação postural, através de modelos de visão computacional e inteligencia artificial, com o intuito de identificar, analisar e documentar fatores de riscos ergonômicos em atividades laborais.
-  repo: greenelab/lab-website-template  
+ 
   tags:
-    - Sesi
-    - Inteligencia artificial
+    - Inteligencia artificial 
     - Visão computacional
     - Realidade Aumentada
 
 - title: Projeto TCE
   subtitle: Projeto de P&D com o TCE para Inteligencia Computacional no Apoio às Ações de Controle Externo
   group: featured
-  image: assets/images/projetos/Tribunal de Contas.png
+  image: assets/images/projetos/TCE.png
   link: https://github.com/
   description: O foco deste projeto P&D com o TCE possui três eixos principais; a identificação e priorização de objetos de auditoria, a implementação de um sistema de processo eletrônico e a capacitação em ciência de dados e inteligência artificial. Esses eixos visam melhorar a efetividade das ações de controle e a eficiência administrativa, otimizando a gestão documental e processual do Tribunal de Contas do Estado. 
-  repo: greenelab/lab-website-template  
+
   tags:
-    - TCE
     - Inteligencia artificial
     - Visão computacional
 
-
-- title: Cool Web App
-  subtitle: a subtitle
-  image: assets/images/projetos/Operadores_Sistemas_Eletricos.png
-  link: https://github.com/
-  description: >-
-    Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
-  tags:
-    - software
-- title: Cool Web Server
-  subtitle: a subtitle
-  image: assets/images/projetos/Operadores_Sistemas_Eletricos.png
-  link: https://github.com/
-  description: >-
-    Lorem ipsum _dolor sit amet_, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  repo: greenelab/lab-website-template
-  tags:
-    - software
-
-- title: dsafas
-  subtitle: qwrwqe
-  group: NCA
-  image: /assets/images/projetos/1729261042723-teste_NCA.png
-  link: qwerwe
-  description: wqerw
-  repo: ''
-  tags:
-    - weqr
-    - sadsa
