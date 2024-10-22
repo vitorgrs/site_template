@@ -14,3 +14,5 @@ yarn.lock
 node_modules
 _cite/.cache/cache.db
 /_cite/.cache
+.vscode/settings.json
+_cite/.cache/cache.db

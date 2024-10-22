@@ -1,11 +1,11 @@
 ---
-title: forms projeto
+
 layout: manager
 ---
 
 <h1 class="tituloForm">Cadastre um novo projeto</h1>
 
-<form action="http://localhost:3000/submit" method="POST" id="form_projeto">
+<form id="form_projeto" onsubmit="return false" enctype="multipart/form-data">
 
     <div id="form_fields">
         <label for="titulo" class="labelName">Título </label>
@@ -15,14 +15,14 @@ layout: manager
         <input type="text" name="proj_subtitulo" id="subtitulo" required placeholder="Insira seu subtítulo aqui"/>
 
         <label for="grupo_projeto" class="labelName">Grupo</label>
-        <input list="grupos" id="grupo" name="grupo_projeto" required placeholder="Selecione seu grupo">
+        <input list="grupos" id="grupo" name="grupo_projeto" placeholder="Selecione seu grupo">
         
         <label for="filefoto" class="labelName" id="labelFoto">Imagem</label>
-        <input type="file" name="filefoto" id="filefoto">
+        <input type="file" name="filefoto" id="filefoto" accept="image/*">
         
 
         <label for="link_projeto" class="labelName">Link do projeto</label>
-        <input type="text" name="link_projeto" id = "link_input" required placeholder="https://github.com/...">
+        <input type="text" name="link_projeto" id = "link_input" placeholder="https://github.com/...">
         
 
         <label for="desc_projeto" class="labelName">Descrição</label>
@@ -34,7 +34,7 @@ layout: manager
 
         <div class="buttonRow">
             <button type="button" class="cancelarButton">Cancelar</button>
-            <button type="submit" class="enviarButton">Enviar</button>
+            <button type="submit" class="enviarButton" id="enviarButton">Enviar</button>
         </div>
     </div>
 
@@ -44,40 +44,4 @@ layout: manager
     </datalist>
 </form>
 
-<script>
-    const chipContainer = document.querySelector(".chip-container");
-    
-    function createChip(name){
-        const chip = document.createElement("div");
-        //chip element
-        chip.classList.add("chip")
-        //chip avatar element
-        const chipName = document.createElement("div"); 
-        chipName.classList.add("chipText");
-        chipName.textContent = name; 
-        const closeIcon = document.createElement("div"); 
-        closeIcon.classList.add("close-icon"); 
-        closeIcon.textContent = "x"; 
-        closeIcon.addEventListener( 
-            "click", 
-            function () { 
-                chip.remove(); 
-            }); 
-        chip.appendChild(chipName); 
-        chip.appendChild(closeIcon); 
-        chipContainer.appendChild(chip);
-    }
-
-    const addChipInput = document.getElementById("addChip")
-
-    addChipInput.addEventListener('keydown', function(e){
-        if(e.key == 'Enter'){
-            event.preventDefault();
-            const name = addChipInput.value.trim();
-            if (name !== ""){
-                createChip(name);
-                addChipInput.value = "";
-            }
-        }
-    })
-</script>
+<script src="../assets/js/formProjeto.js"></script>

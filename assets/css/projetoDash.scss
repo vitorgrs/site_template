@@ -1,0 +1,21 @@
+#pesquisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+h1#teste{
+    color: aqua;
+}
+
+#legenda{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.celula_legenda{
+    text-align: center;
+    border: 1px solid black;
+}

@@ -1,0 +1,43 @@
+  {% assign post = include %}
+
+  <div class="cardnoticia">
+    
+      {% assign url = post.url %}
+      {% assign title = post.title %}
+      {% assign image = post.image %}
+
+      {% if image %}
+          <img
+            src="{{ image | relative_url }}"
+            alt="{{ title | default: "excerpt image" }}"
+          >
+      {% endif %}
+
+      <div class="cardnoticiatext">
+
+        {%
+          include post-info.html
+          tags=post.tags
+        %}
+
+        {% assign excerpt = post.content
+          | default: ""
+          | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
+          | default: post.excerpt
+          | default: ""
+          | strip_html
+        %}
+        {% assign search = post.content
+          | strip_html 
+          | strip_newlines
+          | regex_strip
+        %}
+        <p data-search="{{ search }}">
+          {{ excerpt }}
+        </p>
+        {%
+          include post-info.html
+          published=post.date
+        %}
+      </div>
+  </div> 

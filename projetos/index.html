@@ -1,20 +1,15 @@
 ---
 title: Projetos
+layout: paginas
 nav:
   order: 6
 ---
-<section class="Titulopagina">
-  <h1>Projetos</h1>
-  <p>Veja as últimas notícias sobre o Nca.</p>
-</section>
 
 
 {% include tags.html tags="publication, resource, website" %}
-
 {% include search-info.html %}
 
 
-
-{% include list.html component="card" data="projects" filters="group: featured" %}
+{% include list.html component="projetos" data="projects" %}
 
 

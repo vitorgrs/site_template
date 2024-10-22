@@ -14,7 +14,7 @@
   right: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #895F9C; /* Cor do triângulo */
+  background-color: var(--roxoprimary); /* Cor do triângulo */
   clip-path: polygon(100% 100%, 0 100%, 100% 75%);
   z-index: -1;
 }
@@ -39,89 +39,80 @@
 }
 
 /* Carrossel */
-.noticias{
+.noticias {
   display: flex;
   flex-direction: column;
   padding: 50px 10%;
 }
+
 .carouselNoticias {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   justify-content: center;
-  gap:50px;
+  gap: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative; 
+
 }
 
 .carousel-item {
-  min-width: 100%;
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
+  min-width: 100%;
 }
 
 .carousel-content {
   max-width: 50%;
 }
 
-.carousel img {
+.carousel-item img {
   max-width: 50%;
 }
-
-/* Remove o estilo de lista (pontos) */
-.slick-dots {
-  list-style-type: none; /* Remove os pontos das listas */
-  padding: 0; /* Remove o padding padrão */
-  margin: 0; /* Remove a margem padrão */
-  display: flex; /* Exibe as bolinhas em linha */
-  justify-content: center; /* Centraliza as bolinhas no carrossel */
+.swiper-pagination {
+  position: absolute; 
+  bottom: 10px; 
+  width: 100%; 
+  text-align: center; 
 }
 
-/* Estilo básico das bolinhas */
-.slick-dots li {
-  margin: 0 5px; /* Espaçamento entre as bolinhas */
+.swiper-pagination-bullet {
+  background-color: var(--light-gray); /* Cor padrão das bolinhas */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 1;
 }
 
-/* Remove o texto (números) dentro das bolinhas e bordas */
-.slick-dots li button {
-  font-size: 0; /* Remove os números dentro da bolinha */
-  border: none; /* Remove a borda */
-  outline: none; /* Remove o contorno */
-  background-color: #ccc; /* Cor padrão da bolinha */
-  display: block; /* Garante que as bolinhas ainda sejam visíveis */
-  width: 20px; 
-  height: 20px;
-  border-radius: 50%; /* Bolinhas redondas */
+.swiper-pagination-bullet-active {
+  background-color: var(--gray); /* Cor das bolinhas ativas */
 }
-
-/* Bolinha ativa (do slide atual) */
-.slick-dots li.slick-active button {
-  background-color: #9e9e9e; /* Cor mais forte para a bolinha ativa */
-}
-
 
 
 /* Seção de projetos */
 
-.projetos{
+.ultimosprojetos{
   display: flex;
   flex-direction: column;
   padding: 50px 10%;
 }
-.cardsProjetos {
+.cardsUltimosProjetos {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
 }
 
-.cardprojeto {
+.cardUltimosProjetos {
   text-align: center;
   max-width: 30%;
 }
 
-.cardprojeto img {
+.cardUltimosProjetos img {
   max-width: 100%;
   height: auto;
 }
@@ -141,9 +132,11 @@
 }
 .cardlaboratorio img{
   border-radius: 100%;
+  min-width: 10rem;
+  min-height: 10rem;
+  max-width: 10rem;
 }
-.cardlaboratorio h3{
-}
+
 
 .projetos{
   padding: 50px 10%;
@@ -156,15 +149,22 @@
   justify-content: space-around;
 }
 
-.parceiras{
+.parcerias{
   padding: 50px 10%;
   display: flex;
   flex-direction: column;
 }
 
-.logospaceiras{
+.logosparcerias {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  
+  flex-wrap: wrap; 
+  gap: 40px; 
+  justify-content: center; 
 }
+
+.logosparcerias img {
+  flex: 1 1 calc(150px - 30px); 
+  max-width: calc(150px - 30px); 
+  height: auto;
+}
+
