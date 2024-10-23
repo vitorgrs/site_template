@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # jekyll
-gem "jekyll", "~> 5.0"  # Atualizado para versão 5.x
+gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.7"
 
 gem "html-proofer", "~> 5.0"
