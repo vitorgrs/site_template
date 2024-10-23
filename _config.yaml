@@ -1,7 +1,7 @@
 
 ### jekyll settings
 baseurl: ""
-repo: ""  # Substitua pelo seu nome de repositório
+# Substitua pelo seu nome de repositório
 
 
 # front matter defaults
@@ -59,14 +59,14 @@ highlighter: rouge
 theme: null
 
 sass:
-  sass_dir: site_template/assets/css
+  sass_dir: /assets/css
   style: compressed
 
 
 # force jekyll to include certain files/folders
 include:
-  - site_template/ssets/css
-  - site_template/assets/js
+  - /ssets/css
+  - /assets/js
 
 # force jekyll to exclude certain files/folders
 exclude:

@@ -1,13 +1,13 @@
 {% assign image = page.header | default: site.header | relative_url %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 
-{% assign svg = "site_template/assets/images/logo.svg" | file_exists %}
-{% assign png = "site_template/assets/images/logo.png" | file_exists %}
-{% assign jpg = "site_template/assets/images/logo.jpg" | file_exists %}
+{% assign svg = "/assets/images/logo.svg" | file_exists %}
+{% assign png = "/assets/images/logo.png" | file_exists %}
+{% assign jpg = "/assets/images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: jpg | default: nil %}
 
-{% assign bandeiraBrasil = "site_template/assets/images/bandeiraBrasil.svg" | file_exists %}
-{% assign bandeiraEUA = "site_template/assets/images/bandeiraEUA.svg" | file_exists %}
+{% assign bandeiraBrasil = "/assets/images/bandeiraBrasil.svg" | file_exists %}
+{% assign bandeiraEUA = "/assets/images/bandeiraEUA.svg" | file_exists %}
 
 
 
@@ -37,7 +37,7 @@
         {% assign active_class = "" %}
       {% endif %}
       <a
-        href="site_template/{{ nav_page.url | relative_url }}"
+        href="{{ nav_page.url | relative_url }}"
         class="{{ active_class }}"
         id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
       >

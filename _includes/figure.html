@@ -1,7 +1,7 @@
 <figure class="figure">
   <a
     {% if include.link %}
-      href="{{ site.repo }}{{ include.link | relative_url }}"
+      href="{{ include.link | relative_url }}"
     {% endif %}
     class="figure-image"
     aria-label="{{ include.caption | default: "figure link" }}"
