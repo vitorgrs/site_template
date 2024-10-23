@@ -13,7 +13,7 @@
   
       {% if publicacoes.image %}
         <img class="cardpublicacao-imagem"
-          src="{{ publicacoes.image | relative_url }}"
+          src="{{ site.repo }}{{ publicacoes.image | relative_url }}"
           alt="{{ publicacoes.title | default: "publicacoes image" }}"
         >
       {% endif %}
