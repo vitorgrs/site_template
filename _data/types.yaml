@@ -102,6 +102,10 @@ facebook:
   tooltip: Facebook
   link: https://facebook.com/$VALUE
 
+lattes:
+  text: Lattes
+  link: http://lattes.cnpq.br/$VALUE
+
 instagram:
   icon: fa-brands fa-instagram
   text: Instagram
