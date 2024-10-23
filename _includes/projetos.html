@@ -1,6 +1,13 @@
 {% assign projetos = include %}
 
       <div class="cardProjeto">
+
+        <a
+          href="{{ include.link | relative_url }}"
+          class="cardProjeto-link"
+
+        >
+        
           <img
             src="{{ projetos.image | relative_url }}"
             class="cardProjeto-imagem"
@@ -8,7 +15,7 @@
           >
         
           <div class="cardProjeto-texto">
-            {{ projetos.title }}
+            <h1 class="cardProjeto-titulo">{{ projetos.title }}</h1>
             
             {% if projetos.subtitle %}
               <span class="cardProjeto-subtitulo">{{ projetos.subtitle }}</span>
@@ -21,7 +28,7 @@
             {% endif %}
 
             {% if projetos.tags or projetos.repo %}
-              {% include tags.html tags=projetos.tags repo=projetos.repo %}
+              {% include tags.html tags=projetos.tags %}
             {% endif %}
           </div>
         </a>

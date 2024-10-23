@@ -1,4 +1,6 @@
+
 ### jekyll settings
+baseurl: ""
 
 # front matter defaults
 defaults:
@@ -9,15 +11,18 @@ defaults:
       layout: default
   # markdown files in /_members
   - scope:
-      type: "members"
+      type: "projects"
     values:
-      layout: member
+      layout: projeto
   # markdown files in /_posts
   - scope:
       type: "posts"
     values:
-      layout: post
-
+      layout: noticia
+  - scope:
+      type: "laboratorios"
+    values:
+      layout: laboratorio
 
 
 collections:
@@ -27,6 +32,13 @@ collections:
   # generate page for each post
   posts:
     output: true
+    permalink: /:title/
+  laboratorios:
+    output: true
+    permalink: /:title/
+  projects:
+    output: true
+    permalink: /:title/
 
 # jekyll plugins
 plugins:
@@ -38,6 +50,8 @@ plugins:
 
 # code block syntax highlighting
 highlighter: rouge
+
+
 
 # jekyll theme
 theme: null

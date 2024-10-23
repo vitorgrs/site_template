@@ -3,11 +3,11 @@
 
 .post-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 30px;
   color: var(--dark-gray);
 }
 

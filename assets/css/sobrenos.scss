@@ -3,78 +3,134 @@
 .InformacoesPricipais{
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
-  justify-content: center;
+  gap: 30px;
+  padding: 50px 10% 0 10%
+}
+
+.sobrenosimagem{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .linhasdepesquisa{
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
+  gap: 30px;
+}
+.linhasdepesquisa >*{
+  margin: 0;
+}
+.centralizador {
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-.container {
+.tabela-dinamica {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 255, 255);
+  width: 799px;
+  max-width: 799px;
+}
+
+.menu-opcoes {
   display: flex;
-  background-color: var(--white);
+  width: 100%;
+}
+
+.menu-item {
+  flex: 1;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-height: 300px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center; /* Espaço entre os containers */
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid #ccc;
+  background-color: white;
+  font-size: 1rem;
+}
+.menu-item:last-child{
+border-right: none;
+}
+.menu-item.item1.active {
+  background-color: #7F5A90; 
+  color: white;
+}
+.menu-item.item1:hover {
+  background-color: #7F5A90; 
+  color: white;
+  transition: background-color 1.5s ease;
 }
 
-/* Layout padrão: imagem à esquerda, texto à direita */
-.image-left {
-  display: flex;
+.menu-item.item2.active {
+  background-color: #C93740;
+  color: white; 
+}
+.menu-item.item2:hover {
+  background-color: #C93740;
+  color: white; 
+  transition: background-color 1.5s ease;
+}
+.menu-item.item3.active {
+  background-color: rgb(228, 156, 65);
+  color: white; 
+}
+.menu-item.item3:hover {
+  background-color: rgb(228, 156, 65);
+  color: white;
+  transition: background-color 1.5s ease;
+}
+.menu-item.item4.active {
+  background-color: #1f4570; 
+  color: white; 
+}
+.menu-item.item4:hover {
+  background-color: #1f4570; 
+  color: white;
+  transition: background-color 1.5s ease;
+}
+.menu-item.item5.active {
+  background-color: rgb(120, 123, 157); 
+  color: white; 
+}
+.menu-item.item5:hover {
+  background-color: rgb(120, 123, 157); 
+  color: white; 
+  transition: background-color 1.5s ease;
 }
 
-.image-left .image-container {
-  width: 40%; /* Imagem ocupa 30% do espaço */
-  display: flex;
-  align-items: center;
+
+.conteudolinhasdepesquisa {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  transition: opacity 2s ease;
 }
 
-.image-left .text-container {
-  width: 60%; /* Texto ocupa 70% do espaço */
-  padding-left: 20px;
+.conteudolinhasdepesquisa.active {
+  max-height: fit-content; /* Define a altura máxima quando o conteúdo estiver visível */
+  opacity: 1; /* Torna o conteúdo visível */
+  padding: 15px;
+}
+.texto-centralizado {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
+  width: 800px; /* Ajuste a largura conforme necessário */
+  margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+  text-align: justify; /* Alinha o texto à esquerda */
+  font-size: 18px; /* Tamanho de fonte confortável para leitura */
+  line-height: 1.6; /* Espaçamento de linha para melhorar a legibilidade */
 }
+.texto-centralizado > *{
+    margin: 0;
 
-/* Layout alternativo: imagem à direita, texto à esquerda */
-.image-right {
-  display: flex;
-  flex-direction: row-reverse; /* Inverte a ordem: imagem à direita, texto à esquerda */
 }
+   
+  
 
-.image-right .image-container {
-  width: 40%; /* Imagem ocupa 30% do espaço */
-}
-
-.image-right .text-container {
-  width: 60%; /* Texto ocupa 70% do espaço */
-  padding-right: 20px; /* Espaço entre o texto e a imagem quando a imagem está à direita */
-}
-
-/* Estilos comuns a ambos os layouts */
-.image-container img {
-  width: 100%; /* A imagem vai ocupar 100% da largura do container */
-  height: auto; /* Mantém a proporção original da imagem */
-  object-fit: cover; /* Ajusta a imagem ao espaço disponível, cortando se necessário, sem distorção */
-  max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
-}
-
-.text-container h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  text-align: center;
-}
-
-.text-container p {
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: justify;
-}
