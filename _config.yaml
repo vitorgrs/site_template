@@ -1,6 +1,6 @@
 
 ### jekyll settings
-baseurl: ""
+baseurl: "site_template/"
 
 # front matter defaults
 defaults:
