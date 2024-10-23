@@ -4,11 +4,11 @@ description: Aluno
 role: Mestrado
 affiliation: NCA
 links:
-	email: marvinfar852@nca.ufma.br
-	lattes: http://lattes.cnpq.br/8692492915615089
-	linkedin: https://br.linkedin.com/in/marvinikoi-code852
-	github: https://github.com/MarVinikoi
-	instagram: @vini_koi
+email: marvinfar852@nca.ufma.br
+lattes: http://lattes.cnpq.br/8692492915615089
+linkedin: https://br.linkedin.com/in/marvinikoi-code852
+github: https://github.com/MarVinikoi
+instagram: @vini_koi
 ---
 
 

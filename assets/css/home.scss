@@ -3,7 +3,7 @@
 /* Primeira seção com imagem e texto */
 .sectionConhecaMais {
   position: relative;
-  padding: 50px 10%;
+  padding: 0 10%;
   overflow: hidden; /* Para garantir que o triângulo não saia da seção */
 }
 
@@ -27,10 +27,34 @@
   justify-content: center;
   align-items: center;
   text-align: left;
+
 }
+
 
 .text-block {
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.text-block > h1{
+  font-size: 3rem;
+  margin: 0;
+}
+.text-block > p{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-primary{
+  background-color: var(--amarelosecondary);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--white);
+  max-width: 160px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .image-block img {
@@ -38,13 +62,22 @@
   height: auto;
 }
 
+
+.titulosecaohome{
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
 /* Carrossel */
 .noticias {
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
+  padding: 0 10%;
 }
-
+.noticias h2{
+  margin: 0;
+}
 .carouselNoticias {
   display: flex;
   flex-direction: column;
@@ -60,19 +93,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: left;
   gap: 50px;
   justify-content: center;
   min-width: 100%;
 }
 
+
 .carousel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 50%;
+}
+.carousel-content > *{
+  margin: 0;
+}
+.carousel-item img {
+  max-height: 200px;
 }
 
-.carousel-item img {
-  max-width: 50%;
+.btn-secondary{
+  padding: 10px 20px;
+  background-color: var(--amarelosecondary);
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 20px;
+  max-width: 150px;
 }
 .swiper-pagination {
+  display: block;
   position: absolute; 
   bottom: 10px; 
   width: 100%; 
@@ -80,16 +131,18 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--light-gray); /* Cor padrão das bolinhas */
-  width: 12px;
-  height: 12px;
+  background-color: var(--gray); /* Cor padrão das bolinhas */
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   margin: 0 5px;
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--gray); /* Cor das bolinhas ativas */
+  width: 20px;
+  height: 20px;
+  background-color: var(--amarelosecondary); /* Cor das bolinhas ativas */
 }
 
 
@@ -98,18 +151,21 @@
 .ultimosprojetos{
   display: flex;
   flex-direction: column;
-  padding: 50px 10%;
+  padding: 0 10%;
 }
 .cardsUltimosProjetos {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
+  
 }
 
 .cardUltimosProjetos {
   text-align: center;
   max-width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .cardUltimosProjetos img {
@@ -120,26 +176,68 @@
 
 
 .laboratorios{
-  padding: 50px 10%;
+  padding: 20px 10%;
   display: flex;
+  gap: 30px;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  }
+  
+.laboratorios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--roxoprimary);
+  opacity: 0.15; 
+  z-index: -1; 
 }
-
 .cardslaboratorios {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.cardlaboratorio img{
+.laboratorio-link{
+  text-decoration: none;
+
+}
+.laboratorio-link > h3{
+  text-decoration: none;
+  color: var(--text);
+
+}
+.laboratorioimagem{
+  background-color: var(--white);
   border-radius: 100%;
+}
+.laboratorioimagem img{
+  padding: 20px;
+  object-fit: fill;
   min-width: 10rem;
   min-height: 10rem;
   max-width: 10rem;
+
+}
+
+.laboratorioimagemheader{
+  background-color: var(--white);
+  border-radius: 100%;
+}
+.laboratorioimagemheader img{
+  padding: 10px;
+  object-fit: fill;
+  min-width: 8rem;
+  min-height: 8rem;
+  max-width: 8rem;
+
 }
 
 
 .projetos{
-  padding: 50px 10%;
+  padding: 010%;
   display: flex;
   flex-direction: column;
 }
@@ -150,11 +248,29 @@
 }
 
 .parcerias{
-  padding: 50px 10%;
+  padding: 20px 10% 50px 10%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  gap:30px;
+  z-index: 1;
+  margin-bottom: -50px;
 }
 
+.parcerias::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: var(--roxoprimary);
+opacity: 0.15; 
+z-index: -1; 
+}
+.parcerias > h2{
+  margin: 0;  
+}
 .logosparcerias {
   display: flex;
   flex-wrap: wrap; 

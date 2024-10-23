@@ -4,10 +4,10 @@ image: assets/images/membros/m17.jpg
 description: Ex-Aluno
 affiliation: Ciência da Computação
 links:
-	email: steve.ataky@nca.ufma.br
-	lattes: http://lattes.cnpq.br/1031971059949770
-	linkedin: https://www.linkedin.com/in/steveataky/
-	instagram: @tmatsteve
+email: steve.ataky@nca.ufma.br
+lattes: http://lattes.cnpq.br/1031971059949770
+linkedin: https://www.linkedin.com/in/steveataky/
+instagram: @tmatsteve
 ---
 
 

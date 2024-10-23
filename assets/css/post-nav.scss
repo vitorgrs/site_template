@@ -5,10 +5,10 @@ $wrap: 600px;
 
 .post-nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
   color: var(--gray);
+  width: 100%;
 }
 
 .post-nav > :first-child {

@@ -2,12 +2,15 @@
 
 <div class="cardpublicacao">
 
-  <a
+  
       {% if publicacoes.link %}
+        <a
         href="{{ publicacoes.link | relative_url }}"
+        class="cardpublicacao-link"
+        >
       {% endif %}
-      class="cardpublicacao-link"
-  >   
+      
+  
       {% if publicacoes.image %}
         <img class="cardpublicacao-imagem"
           src="{{ publicacoes.image | relative_url }}"

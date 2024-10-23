@@ -5,11 +5,11 @@ description: Aluno
 role: Doutorado
 affiliation: DEINF
 links:
-	email: marcos.melo@nca.ufma.br
-	lattes: http://lattes.cnpq.br/6573361384439101
-	linkedin: https://www.linkedin.com/in/marcos-ferreira-3965a89b/
-	github: https://github.com/MarcosMF86
-	orcid: 0000-0002-4462-1517
+email: marcos.melo@nca.ufma.br
+lattes: http://lattes.cnpq.br/6573361384439101
+linkedin: https://www.linkedin.com/in/marcos-ferreira-3965a89b/
+github: https://github.com/MarcosMF86
+orcid: 0000-0002-4462-1517
 ---
 
 

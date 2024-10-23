@@ -5,11 +5,11 @@ description: Aluno
 role: Mestrado
 affiliation: Computação
 links:
-	email: daniel.pinto@discente.ufma.br
-	lattes: http://lattes.cnpq.br/1818008360814563
-	linkedin: https://www.linkedin.com/in/daniel-pinto-ti
-	github: https://github.com/DanielMoreiraPinto
-	orcid: https://orcid.org/0000-0002-1694-2612
+email: daniel.pinto@discente.ufma.br
+lattes: http://lattes.cnpq.br/1818008360814563
+linkedin: https://www.linkedin.com/in/daniel-pinto-ti
+github: https://github.com/DanielMoreiraPinto
+orcid: https://orcid.org/0000-0002-1694-2612
 ---
 
 

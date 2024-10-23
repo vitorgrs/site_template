@@ -5,8 +5,8 @@ description: Professor
 role: Doutorado
 affiliation: DEINF/UFMA
 links:
-	email: luisrivero@nca.ufma.br
-	lattes: http://lattes.cnpq.br/8534667641706692
+email: luisrivero@nca.ufma.br
+lattes: http://lattes.cnpq.br/8534667641706692
 ---
 
 

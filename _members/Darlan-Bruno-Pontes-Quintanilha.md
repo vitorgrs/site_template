@@ -4,10 +4,10 @@ image: assets/images/membros/m7.jpg
 description: Professor
 affiliation: Departamento de Informática/DEINF
 links:
-	email: dquintanilha@nca.ufma.br
-	lattes: http://lattes.cnpq.br/4222253532775153
-	linkedin: www.linkedin.com/in/darlan-quintanilha-0b058923
-	orcid: https://orcid.org/0000-0001-8134-4873
+email: dquintanilha@nca.ufma.br
+lattes: http://lattes.cnpq.br/4222253532775153
+linkedin: www.linkedin.com/in/darlan-quintanilha-0b058923
+orcid: https://orcid.org/0000-0001-8134-4873
 ---
 
 

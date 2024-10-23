@@ -4,10 +4,10 @@ image: assets/images/membros/m21.png
 description: Professor
 affiliation: DEINF
 links:
-	email: jdallyson@nca.ufma.br
-	lattes: http://lattes.cnpq.br/6047330108382641
-	github: https://gitlab.com/jdallyson
-	orcid: https://orcid.org/0000-0001-7013-9700
+email: jdallyson@nca.ufma.br
+lattes: http://lattes.cnpq.br/6047330108382641
+github: https://gitlab.com/jdallyson
+orcid: https://orcid.org/0000-0001-7013-9700
 ---
 
 

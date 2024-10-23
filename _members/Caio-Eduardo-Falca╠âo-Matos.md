@@ -4,8 +4,8 @@ description: Aluno
 role: Doutorado
 affiliation: IFMA
 links:
-	email: caioefalcao@nca.ufma.br
-	lattes: http://lattes.cnpq.br/5302229336703120
+email: caioefalcao@nca.ufma.br
+lattes: http://lattes.cnpq.br/5302229336703120
 ---
 
 

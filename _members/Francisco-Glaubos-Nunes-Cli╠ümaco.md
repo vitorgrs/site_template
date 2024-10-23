@@ -4,8 +4,8 @@ image: assets/images/membros/m10.jpeg
 description: Professor
 affiliation: Universidade Federal do Maranhão / Departamento de Informática
 links:
-	email: francisco.glaubos@ufma.br
-	lattes: http://lattes.cnpq.br/1711180190759554
+email: francisco.glaubos@ufma.br
+lattes: http://lattes.cnpq.br/1711180190759554
 ---
 
 

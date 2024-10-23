@@ -1,0 +1,30 @@
+---
+---
+
+.section-menu{
+  padding: 50px 30px;
+  height: 100%;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--light-gray);
+  padding: 20px;
+
+}
+.menu-secao{
+  font-size: 18px;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  
+}
+.menu-secao:hover{
+  color: var(--white);
+  
+}
+.menu-secao.active{
+  color: var(--white);
+  
+}

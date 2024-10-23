@@ -5,10 +5,10 @@ description: Aluno
 role: Doutorado
 affiliation: DCCMAPI
 links:
-	email: thiago.freire@ifma.edu.br
-	lattes: http://lattes.cnpq.br/9791164136013322
-	github: https://github.com/thiago-freire
-	orcid: 0009-0004-8093-4029
+email: thiago.freire@ifma.edu.br
+lattes: http://lattes.cnpq.br/9791164136013322
+github: https://github.com/thiago-freire
+orcid: 0009-0004-8093-4029
 ---
 
 
