@@ -11,10 +11,10 @@ css_files: ['home.scss']
       <h1>Núcleo de Computação Aplicada</h1>
       <p>
         O laboratório Núcleo de Computação Aplicada (NCA) promove pesquisa e inovação, dedicado a promover avanço tecnológico e científico, formando profissionais qualificados e desenvolvendo soluções que impactam o futuro da computação e da sociedade.      </p>
-      <a href="/sobreNos/" class="btn-primary">Conheça Mais</a>
+      <a href="{{ site.repo }}/sobreNos/" class="btn-primary">Conheça Mais</a>
     </div>
     <div class="image-block">
-      <img src="assets/images/imagemHome.svg" alt="Imagem Descritiva">
+      <img src="{{ site.repo }}/assets/images/imagemHome.svg" alt="Imagem Descritiva">
     </div>
   </div>
 </section>
@@ -47,7 +47,7 @@ css_files: ['home.scss']
             %}
             <p>{{ excerpt | truncatewords: 20, "..." }}</p>
 
-            <a href="{{ post.url | relative_url }}" class="btn-secondary">Saiba Mais</a>
+            <a href="{{ site.repo }}{{ post.url | relative_url }}" class="btn-secondary">Saiba Mais</a>
           </div>
         </div>
       {% endfor %}
@@ -67,7 +67,7 @@ css_files: ['home.scss']
     
     {% for lab in laboratorios %}
       <div class="cardlaboratorio">
-        <a href="{{ lab.url | relative_url }}" class="laboratorio-link">
+        <a href="{{ site.repo }}{{ lab.url | relative_url }}" class="laboratorio-link">
           <div class="laboratorioimagem">
             <img src="{{ lab.image | relative_url }}" alt="{{ lab.name }}">
           </div>
@@ -92,7 +92,7 @@ css_files: ['home.scss']
     <div class="cardsUltimosProjetos">
       {% for project in projects %}
         <div class="cardUltimosProjetos">
-          <a href="{{ project.url | relative_url }}" class="cardProjeto-link">
+          <a href="{{ site.repo }}{{ project.url | relative_url }}" class="cardProjeto-link">
 
             {% if project.image %}
               <img
