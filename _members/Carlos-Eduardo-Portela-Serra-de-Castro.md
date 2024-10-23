@@ -1,10 +1,10 @@
 ---
 name: Carlos Eduardo Portela Serra de Castro
-description: Professor
+description: 
+role: Professor
 affiliation: Departamento de Informática
-links:
-email: portela@nca.ufma.br 
-lattes: http://lattes.cnpq.br/4162711893419264
-orcid: https://orcid.org/0000-0002-6880-7922
+linkemail: portela@nca.ufma.br 
+linklattes: http://lattes.cnpq.br/4162711893419264
+linkorcid: https://orcid.org/0000-0002-6880-7922
 ---
 

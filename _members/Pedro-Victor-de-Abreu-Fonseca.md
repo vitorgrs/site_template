@@ -1,12 +1,8 @@
 ---
 name: Pedro Victor de Abreu Fonseca
-description: Aluno
+description: Apaixonado por computação. Que o futuro seja computacional. 
 role: Graduação
-links:
-email: pedro.fonseca@nca.ufma.br 
-lattes: http://lattes.cnpq.br/2068556057699400
-github: https://github.com/Pvictox
+linkemail: pedro.fonseca@nca.ufma.br 
+linklattes: http://lattes.cnpq.br/2068556057699400
+linkgithub: https://github.com/Pvictox
 ---
-
-
-Apaixonado por computação. Que o futuro seja computacional. 

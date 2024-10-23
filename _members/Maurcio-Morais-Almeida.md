@@ -1,10 +1,9 @@
 ---
 name: Maurcio Morais Almeida
-description: Aluno
+description: 
 role: Doutorado
-links:
-email: mauricio.almeida@nca.ufma.br
-lattes: http://lattes.cnpq.br/5687872061960566
-orcid: https://orcid.org/0000-0003-4019-0964
+linkemail: mauricio.almeida@nca.ufma.br
+linklattes: http://lattes.cnpq.br/5687872061960566
+linkorcid: https://orcid.org/0000-0003-4019-0964
 ---
 
