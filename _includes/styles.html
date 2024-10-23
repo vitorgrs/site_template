@@ -15,7 +15,7 @@
 {% for style in styles %}
   {% unless style.url contains ".map" %}
     <link
-      href="{{ site.baseurl }}{{ style.path | replace: ".scss", ".css" | relative_url }}"
+      href="{{ style.path | replace: ".scss", ".css" | relative_url }}"
       rel="stylesheet"
     >
   {% endunless %}
