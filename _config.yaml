@@ -1,6 +1,8 @@
 
 ### jekyll settings
 baseurl: ""
+repo: "site_template"  # Substitua pelo seu nome de repositório
+
 
 # front matter defaults
 defaults:
@@ -58,6 +60,8 @@ theme: null
 
 sass:
   sass_dir: assets/css
+  style: compressed
+
 
 # force jekyll to include certain files/folders
 include:

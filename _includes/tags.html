@@ -15,6 +15,8 @@
 {% if tags.size > 0 or include.repo %}
   <div
     class="tags"
+    id="{% if page.title == 'Noticias' %}tagnoticia{% elsif page.title == 'Publicações' %}tagpublicacoes{% elsif page.title == 'Projetos' %}tagprojeto{% endif %}"
+
     {% if include.repo %}
       data-repo="{{ include.repo }}"
     {% endif %}
