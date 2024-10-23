@@ -1,7 +1,7 @@
 ---
 title: Modal
-image: assets/images/laboratorios/logomodal.svg
-background_image: "/assets/images/fundos/fundoneutro.svg"
+image: /assets/images/laboratorios/logomodal.svg
+background_image: "assets/images/fundos/fundoneutro.svg"
 members: 
   -
   -

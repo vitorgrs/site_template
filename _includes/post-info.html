@@ -17,7 +17,7 @@
   
   {% if postinfo.imagem %}
     <img class="ImagemDaNoticia"
-      src="{{ site.repo }}{{ postinfo.imagem | relative_url }}"
+      src="{{ postinfo.imagem | relative_url }}"
       alt="{{ postinfo.title | default: "excerpt image" }}"
     >
   {% endif %}

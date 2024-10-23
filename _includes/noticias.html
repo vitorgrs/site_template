@@ -7,14 +7,14 @@
       {% assign image = post.image %}
 
       <a
-      href="{{ site.repo }}{{ url | relative_url }}"
+      href="{{ url | relative_url }}"
       class="cardnoticia-link "
 
       >
 
         {% if image %}
             <img
-              src="{{ site.repo }}{{ image | relative_url }}"
+              src="{{ image | relative_url }}"
               alt="{{ title | default: "excerpt image" }}"
               class="cardnoticia-imagem "
             >
@@ -22,7 +22,7 @@
 
         <div class="cardnoticiatext">
           <a
-            href="{{ site.repo }}{{ url | relative_url }}"
+            href="{{ url | relative_url }}"
             class="cardnoticia-link "
           >
             <h1 class="cardnoticia-titulo">
@@ -43,7 +43,7 @@
             | regex_strip
           %}
           <a
-          href="{{ site.repo }}{{ url | relative_url }}"
+          href="{{ url | relative_url }}"
           class="cardnoticia-link "
         >
           <p data-search="{{ search }}" class="cardnoticia-descricao">
