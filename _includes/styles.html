@@ -20,12 +20,3 @@
     >
   {% endunless %}
 {% endfor %}
-
-<!-- include all css in styles folder -->
-{% assign styles = site.static_files
-  | where_exp: "file",
-    "file.path contains 'assets/css' and file.path contains '.css'"
-%}
-{% for style in styles %}
-  <link href="{{ style.path | relative_url }}" rel="stylesheet" />
-{% endfor %}
