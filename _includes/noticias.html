@@ -7,7 +7,7 @@
       {% assign image = post.image %}
 
       <a
-      href="{{ url | relative_url }}"
+      href="{{ site.repo }}{{ url | relative_url }}"
       class="cardnoticia-link "
 
       >
@@ -22,7 +22,7 @@
 
         <div class="cardnoticiatext">
           <a
-            href="{{ url | relative_url }}"
+            href="{{ site.repo }}{{ url | relative_url }}"
             class="cardnoticia-link "
           >
             <h1 class="cardnoticia-titulo">
@@ -43,7 +43,7 @@
             | regex_strip
           %}
           <a
-          href="{{ url | relative_url }}"
+          href="{{ site.repo }}{{ url | relative_url }}"
           class="cardnoticia-link "
         >
           <p data-search="{{ search }}" class="cardnoticia-descricao">

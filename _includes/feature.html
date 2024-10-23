@@ -6,7 +6,7 @@
 >
   <a
     {% if include.link %}
-      href="{{ include.link | relative_url }}" 
+      href="{{ site.repo }}{{ include.link | relative_url }}" 
     {% endif %}
     class="feature-image"
     aria-label="{{ include.title | default: "feature link" }}"

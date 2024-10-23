@@ -47,7 +47,7 @@ css_files: ['home.scss']
             %}
             <p>{{ excerpt | truncatewords: 20, "..." }}</p>
 
-            <a href="{{ post.url | relative_url }}" class="btn-secondary">Saiba Mais</a>
+            <a href="{{ site.repo }}{{ post.url | relative_url }}" class="btn-secondary">Saiba Mais</a>
           </div>
         </div>
       {% endfor %}
@@ -67,7 +67,7 @@ css_files: ['home.scss']
     
     {% for lab in laboratorios %}
       <div class="cardlaboratorio">
-        <a href="{{ lab.url | relative_url }}" class="laboratorio-link">
+        <a href="{{ site.repo }}{{ lab.url | relative_url }}" class="laboratorio-link">
           <div class="laboratorioimagem">
             <img src="{{ site.repo }}{{ lab.image | relative_url }}" alt="{{ lab.name }}">
           </div>
@@ -92,7 +92,7 @@ css_files: ['home.scss']
     <div class="cardsUltimosProjetos">
       {% for project in projects %}
         <div class="cardUltimosProjetos">
-          <a href="{{ project.url | relative_url }}" class="cardProjeto-link">
+          <a href="{{ site.repo }}{{ project.url | relative_url }}" class="cardProjeto-link">
 
             {% if project.image %}
               <img

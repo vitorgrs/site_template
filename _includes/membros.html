@@ -17,19 +17,19 @@
       </div>
       <div class="linksmembros">
         {% if members.linklattes %}
-          <a href="{{ members.linklattes }}" class="icony"><img src="{{ site.repo }}./assets/images/icones/lattes-002.svg" title="Lattes" alt="Lattes" class="icone"></a>
+          <a href="{{ site.repo }}{{ members.linklattes }}" class="icony"><img src="{{ site.repo }}./assets/images/icones/lattes-002.svg" title="Lattes" alt="Lattes" class="icone"></a>
         {% endif %}
         {% if members.linkorcid %}
-          <a href="{{ members.linkorcid }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/orcid.svg" title="Orcid" alt="Orcid" class="icone"></a>
+          <a href="{{ site.repo }}{{ members.linkorcid }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/orcid.svg" title="Orcid" alt="Orcid" class="icone"></a>
         {% endif %}
         {% if members.linklinkedin %}
-          <a href="{{ members.linklinkedin }}" class="icony"><img src="{{ site.repo }}./assets/images/icones/linkedin.svg" title="Linkedin" alt="Linkedin" class="icone"></a>
+          <a href="{{ site.repo }}{{ members.linklinkedin }}" class="icony"><img src="{{ site.repo }}./assets/images/icones/linkedin.svg" title="Linkedin" alt="Linkedin" class="icone"></a>
         {% endif %}
         {% if members.linkemail %}
-          <a href="mailto:{{ members.linkemail }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/email.svg" title="Email" alt="Email" class="icone"></a>
+          <a href="{{ site.repo }}mailto:{{ members.linkemail }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/email.svg" title="Email" alt="Email" class="icone"></a>
         {% endif %}
         {% if members.linkgithub %}
-          <a href="{{ members.linkgithub }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/git.svg" title="Git" alt="Git" class="icone"></a>
+          <a href="{{ site.repo }}{{ members.linkgithub }}" class="icony"><img src="{{ site.repo }}/assets/images/icones/git.svg" title="Git" alt="Git" class="icone"></a>
         {% endif %}
       </div>
     </div>

@@ -5,7 +5,7 @@
   
       {% if publicacoes.link %}
         <a
-        href="{{ publicacoes.link | relative_url }}"
+        href="{{ site.repo }}{{ publicacoes.link | relative_url }}"
         class="cardpublicacao-link"
         >
       {% endif %}
