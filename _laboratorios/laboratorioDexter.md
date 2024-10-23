@@ -1,6 +1,6 @@
 ---
 title: Dexter
-image: assets/images/laboratorios/logodexter.svg
+image: site_template/assets/images/laboratorios/logodexter.svg
 background_image: "assets/images/fundos/fundoneutro.svg"
 members: 
   -

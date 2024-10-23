@@ -37,7 +37,7 @@
         {% assign active_class = "" %}
       {% endif %}
       <a
-        href="/{{ nav_page.url | relative_url }}"
+        href="{{ nav_page.url | relative_url }}"
         class="{{ active_class }}"
         id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
       >

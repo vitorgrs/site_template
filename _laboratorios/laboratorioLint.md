@@ -1,6 +1,6 @@
 ---
 title: Lint
-image: assets/images/laboratorios/logolint.svg
+image: site_template/assets/images/laboratorios/logolint.svg
 background_image: "assets/images/fundos/fundoneutro.svg"
 members: 
   -
