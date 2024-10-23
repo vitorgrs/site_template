@@ -1,13 +1,13 @@
 ---
 title: Example post 1
-image: assets/images/sobrenos/imagempesquisadores.jpg
+image: /NCA/assets/images/sobrenos/imagempesquisadores.jpg
 show_search: false
 show_post_info: true
 tags:
   - biology
   - medicine
   - big data
-background_image: "assets/images/fundos/fundoneutro.svg"
+background_image: "/NCA/assets/images/fundos/fundoneutro.svg"
 
 ---
 
