@@ -9,6 +9,17 @@
 }
 
 
+#lattesDiv{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* padding: 10px; */
+}
+
+#inputLattes{
+    margin-left: 5px;
+}
 
 #legenda{
     display: flex;
