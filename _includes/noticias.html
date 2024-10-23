@@ -30,11 +30,6 @@
             </h1>
           </a>
 
-          {%
-            include post-info.html
-            tags=post.tags
-          %}
-
           {% assign excerpt = post.content
             | default: ""
             | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
