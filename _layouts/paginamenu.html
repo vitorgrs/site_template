@@ -11,7 +11,8 @@
         image=page.image %}
       <section class="conteudo">
         <div class="section-menu">
-          <div class="menu"></div>
+          <div class="menu" id="{% if page.title == 'Membros' %}menumembros{% elsif page.title == 'Sobre Nós' %}menusobrenos{% endif %}">
+          </div>
         </div>
         <div class="conteudo-paginamenu">
           {{ content }}

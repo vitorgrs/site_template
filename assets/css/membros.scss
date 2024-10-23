@@ -232,14 +232,14 @@ justify-content: center;
 .btn-saiba-mais, .btn-saiba-menos {
   padding: 8px 16px;
   border: none;
-  background-color: var(--vermelhoprimary);
+  background-color: var(--amareloprimary);
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn-saiba-mais:hover, .btn-saiba-menos:hover {
-  background-color: var(--vermelhoprimary);
+  background-color: var(--amareloprimary);
 }
 
 .cardmembro h3 {
@@ -253,7 +253,7 @@ justify-content: center;
 }
 
 .btn-saiba-mais, .btn-saiba-menos {
-  background-color: var(--vermelhoprimary);
+  background-color: var(--amareloprimary);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -264,7 +264,7 @@ justify-content: center;
 }
 
 .btn-saiba-mais:hover, .btn-saiba-menos:hover {
-  background-color: var(--vermelhoprimary);
+  background-color: var(--amareloprimary);
 }
 
 .linksmembros a img {
