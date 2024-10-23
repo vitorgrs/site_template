@@ -1,3 +1,4 @@
+<!-- Estilos externos -->
 <link 
   href="https://cdn.jsdelivr.net/gh/StylishThemes/Syntax-Themes/pygments/css-github/pygments-tomorrow-night-eighties.css"
   rel="stylesheet"
@@ -8,15 +9,13 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-<!-- include all sass in styles folder -->
+<!-- Include all CSS from the styles folder -->
 {% assign styles = site.pages
-  | where_exp: "file", "file.url contains '/assets/css'"
+  | where_exp: "file", "file.url contains '/assets/css' and file.ext == '.css'"
 %}
 {% for style in styles %}
-  {% unless style.url contains ".map" %}
-    <link
-      href="{{ site.baseurl }}{{ style.path | replace: ".scss", ".css" | relative_url }}"
-      rel="stylesheet"
-    >
-  {% endunless %}
+  <link
+    href="{{ style.url | relative_url }}"
+    rel="stylesheet"
+  >
 {% endfor %}
