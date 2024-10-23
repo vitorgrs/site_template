@@ -10,7 +10,7 @@
 
 
 <!-- include all js in scripts folder -->
-{% assign scripts = site.static_files | where_exp: "file", "file.path contains '/assets/js/'" %}
+{% assign scripts = site.static_files | where_exp: "file", "file.path contains 'site_template//assets/js/'" %}
 {% for script in scripts %}
   <script src="/{{ site.repo }}{{ script.path | relative_url }}"></script>
 {% endfor %}
