@@ -21,7 +21,7 @@ css_files: ['home.scss']
 
 <!-- Carrossel -->
 <section class="noticias">
-  <h2>Últimas Notícias</h2>
+  <h2 class="titulosecaohome">Últimas Notícias</h2>
   
   <div class="swiper-container carouselNoticias">
     <div class="swiper-wrapper">
@@ -30,13 +30,11 @@ css_files: ['home.scss']
       
       {% for post in latest_noticias %}
         <div class="swiper-slide carousel-item">
-          <a href="{{ post.url | relative_url }}">
+          
             {% if post.image %}
               <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="carousel-imagem">
-            {% else %}
-              <img src="assets/images/imagemNoticia.svg" alt="Imagem padrão" class="carousel-imagem">
             {% endif %}
-          </a>
+          
           <div class="carousel-content">
             <h2>{{ post.title }}</h2>
             
@@ -61,34 +59,25 @@ css_files: ['home.scss']
 
 
 <section class="laboratorios">
-  <h2>Laboratórios</h2>
+  <h2 class="titulosecaohome">Laboratórios</h2>
+  
   <div class="cardslaboratorios">
-    <div class="cardlaboratorio">
-      <div class="laboratorimagem">
-        <img src="assets/images/laboratorios/logodexter.svg" alt="Card 1">
+    {% assign laboratorios = site.laboratorios %}
+    
+    
+    {% for lab in laboratorios %}
+      <div class="cardlaboratorio">
+        <a href="{{ lab.url | relative_url }}" class="laboratorio-link">
+          <div class="laboratorioimagem">
+            <img src="{{ lab.image | relative_url }}" alt="{{ lab.name }}">
+          </div>
+          <h3>{{ lab.title }}</h3>
+        </a>
       </div>
-      <h3>DEXTER</h3>
-    </div>
-    <div class="cardlaboratorio">
-      <div class="laboratorimagem">
-        <img src="assets/images/laboratorios/logolint.svg" alt="Card 2">
-      </div>
-      <h3>LINT</h3>
-    </div>
-    <div class="cardlaboratorio">
-      <div class="laboratorimagem">
-        <img src="assets/images/laboratorios/logomodal.svg" alt="Card 3">
-      </div>
-      <h3>MODAL</h3>
-    </div>
-    <div class="cardlaboratorio">
-      <div class="laboratorimagem">
-        <img src="assets/images/laboratorios/logoviplab.svg" alt="Card 3">
-      </div>
-      <h3>VIP lAB</h3>
-    </div>
+    {% endfor %}
   </div>
 </section>
+
 <!-- Seção de projetos -->
 
 {% assign emptyarray = "" | split: "," %}
@@ -99,11 +88,11 @@ css_files: ['home.scss']
   {% assign projects = projects | sort: "date" | reverse | slice: 0, 3 %}
   
   <section class="ultimosprojetos">
-    <h2>Últimos Projetos</h2>
+    <h2 class="titulosecaohome">Últimos Projetos</h2>
     <div class="cardsUltimosProjetos">
       {% for project in projects %}
         <div class="cardUltimosProjetos">
-          <a href="{{ project.link | relative_url }}" class="cardProjeto-link">
+          <a href="{{ project.url | relative_url }}" class="cardProjeto-link">
 
             {% if project.image %}
               <img
@@ -138,7 +127,7 @@ css_files: ['home.scss']
 
 
 <section class="parcerias">
-  <h2>Parcerias</h2>
+  <h2 class="titulosecaohome">Parcerias</h2>
   <div class="logosparcerias">
     <img class="logoparceria" src="assets/images/parceiras/logoufma.svg" alt="Logo 1">
     <img class="logoparceria" src="assets/images/parceiras/logoufcg.svg" alt="Logo 2">

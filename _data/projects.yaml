@@ -51,14 +51,3 @@
   repo: greenelab/lab-website-template
   tags:
     - software
-- title: Projeto NCA
-  subtitle: Um projeto do NCA
-  group: NCA
-  image: /assets/images/projetos/1729604689470-teste_NCA.png
-  link: ''
-  description: Um teste para projeto do NCA
-  repo: ''
-  tags:
-    - ML
-    - IA
-    - NCA

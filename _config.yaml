@@ -19,7 +19,10 @@ defaults:
       type: "posts"
     values:
       layout: noticia
-
+  - scope:
+      type: "laboratorios"
+    values:
+      layout: laboratorio
 
 
 collections:
@@ -29,6 +32,13 @@ collections:
   # generate page for each post
   posts:
     output: true
+    permalink: /:title/
+  laboratorios:
+    output: true
+    permalink: /:title/
+  projects:
+    output: true
+    permalink: /:title/
 
 # jekyll plugins
 plugins:
@@ -41,7 +51,6 @@ plugins:
 # code block syntax highlighting
 highlighter: rouge
 
-permalink: /:title/
 
 
 # jekyll theme

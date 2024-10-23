@@ -69,11 +69,11 @@
     <div class="tipoecards">
     {% endif %}      
       {% if include.component == "noticias" or include.component == "publicacoes" %}
-        <h3 class="ano">{{ group.name }}</h3> 
+        <h3 class="ano titulosecao">{{ group.name }}</h3> 
       {% elsif include.component == "projetos" %}
-        <h3 class="group">{{ group.name }}</h3> 
+        <h3 class="group titulosecao">{{ group.name }}</h3> 
       {% elsif include.component == "membros" %}
-        <h3 class="role">{{ group.name }}</h3> 
+        <h3 class="role titulosecao">{{ group.name }}</h3> 
       {% endif %}
 
       {% if include.component == "noticias" %}
