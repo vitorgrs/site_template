@@ -21,7 +21,7 @@
 >
   <a href="{{ "/" | relative_url }}" class="home">
       <span>
-          <img class="logo" src="{{ site.repo }}{{ logo | relative_url }}" alt="logo">
+          <img class="logo" src="{{ logo | relative_url }}" alt="logo">
       </span>
   </a>
 
@@ -37,7 +37,7 @@
         {% assign active_class = "" %}
       {% endif %}
       <a
-        href="{{ site.repo }}{{ nav_page.url | relative_url }}"
+        href="/{{ nav_page.url | relative_url }}"
         class="{{ active_class }}"
         id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
       >
@@ -53,17 +53,17 @@
 
   <div class="language-selector">
     <div class="selected-language">
-      <img src="{{ site.repo }}{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
+      <img src="{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
       <span>PT</span>
       <span class="arrow-down">&#9662;</span> <!-- Adiciona a seta aqui -->
     </div>
     <ul class="language-options">
       <li data-lang="pt">
-        <img src="{{ site.repo }}{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
+        <img src="{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
         <span>PT</span>
       </li>
       <li data-lang="en">
-        <img src="{{ site.repo }}{{ bandeiraEUA | relative_url }}" alt="Bandeira dos EUA">
+        <img src="{{ bandeiraEUA | relative_url }}" alt="Bandeira dos EUA">
         <span>EN</span>
       </li>
     </ul>
