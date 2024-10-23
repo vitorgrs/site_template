@@ -1,7 +1,7 @@
 ---
 title: Vip Lab
 image: assets/images/laboratorios/logoviplab.svg
-background_image: "/assets/images/fundos/fundoneutro.svg"
+background_image: "assets/images/fundos/fundoneutro.svg"
 members: 
   -
   -
