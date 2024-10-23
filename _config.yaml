@@ -1,7 +1,7 @@
 
 ### jekyll settings
 baseurl: ""
-repo: "site_template"  # Substitua pelo seu nome de repositório
+repo: ""  # Substitua pelo seu nome de repositório
 
 
 # front matter defaults
