@@ -1,13 +1,13 @@
 ---
 title: Example post 3
-image: assets/images/sobrenos/imagempesquisadores.jpg
+image: /assets/images/sobrenos/imagempesquisadores.jpg
 tags:
   - biology
   - medicine
   - big data
 show_search: false
 show_post_info: true
-background_image: "assets/images/fundos/fundoneutro.svg"
+background_image: "/assets/images/fundos/fundoneutro.svg"
 
 ---
 

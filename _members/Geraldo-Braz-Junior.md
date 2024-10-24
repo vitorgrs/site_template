@@ -1,6 +1,6 @@
 ---
 name: Geraldo Braz Junior
-image: assets/images/membros/m2.jpg
+image: /assets/images/membros/m2.jpg
 description: 
 role: Professor
 affiliation: Departamento de Informática

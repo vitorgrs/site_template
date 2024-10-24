@@ -1,6 +1,6 @@
 ---
 name: Joana Kuelvia de Araujo Silva
-image: assets/images/membros/m32.jfif
+image: /assets/images/membros/m32.jfif
 description:
 role: Graduação
 affiliation: DEINF

@@ -1,6 +1,6 @@
 ---
 name: Vandecia Fernandes 
-image: assets/images/membros/m26.png
+image: /assets/images/membros/m26.png
 description:
 role: Professor
 affiliation: Engenharia da computação/ ufma
