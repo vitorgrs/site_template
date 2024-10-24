@@ -18,7 +18,7 @@
 {% for style in styles %}
   {% unless style.url contains ".map" %}
     <link
-      href="/NCA/{{ style.path | replace: '.scss', '.css' | relative_url | remove_first: '/' }}"
+      href="/{{ style.path | replace: '.scss', '.css' | relative_url | remove_first: '/' }}"
       rel="stylesheet"
     />
   {% endunless %}

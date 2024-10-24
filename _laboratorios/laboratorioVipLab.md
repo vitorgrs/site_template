@@ -1,7 +1,7 @@
 ---
 title: Vip Lab
-image: /NCA/assets/images/laboratorios/logoviplab.svg
-background_image: "assets/images/fundos/fundoneutro.svg"
+image: /assets/images/laboratorios/logoviplab.svg
+background_image: "/assets/images/fundos/fundoneutro.svg"
 members: 
   -
   -

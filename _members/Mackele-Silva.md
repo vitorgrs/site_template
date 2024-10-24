@@ -1,6 +1,6 @@
 ---
 name: Mackele Silva
-image: assets/images/membros/m18.jpg
+image: /assets/images/membros/m18.jpg
 description:
 role: Graduação
 affiliation: deinf
