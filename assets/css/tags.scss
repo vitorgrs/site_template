@@ -9,7 +9,15 @@
   gap: 10px;
   max-width: 100%;
 }
-
+#tagprojeto > a{
+  background: var(--amarelosecondary) !important;
+}
+#tagnoticia > a{
+  background:var(--roxoprimary) !important;
+}
+#tagpublicacoes > a{
+  background: var(--vermelhoprimary)!important;
+}
 .tag {
   max-width: 100%;
   margin: 0;
