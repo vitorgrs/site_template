@@ -89,17 +89,7 @@
 }
 
 
-.headerPaginaNoticia { 
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  background-image: url('/assets/images/Fundo_Header_Pagina_Noticias.svg'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;  
-  width: 100%; 
-  padding: 0 10%;
-}
+
 
 .headerPaginaNoticia .tituloPaginaNoticia {
   font-size: 30px; 

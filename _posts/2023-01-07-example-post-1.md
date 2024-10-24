@@ -1,6 +1,6 @@
 ---
 title: Example post 1
-image: ../assets/images/sobrenos/imagempesquisadores.jpg
+image: /assets/images/sobrenos/imagempesquisadores.jpg
 show_search: false
 show_post_info: true
 tags:
