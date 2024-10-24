@@ -1,6 +1,6 @@
 ---
 name: Venícius Garcia Rego
-image: assets/images/membros/m22.png
+image: /assets/images/membros/m22.png
 description:
 role: Ex-aluno
 linkemail: venicius.gr@gmail.com

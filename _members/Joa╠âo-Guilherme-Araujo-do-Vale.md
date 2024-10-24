@@ -1,6 +1,6 @@
 ---
 name: João Guilherme Araujo do Vale
-image: assets/images/membros/m30.jpg
+image: /assets/images/membros/m30.jpg
 description: Olá, sou João Guilherme Vale. Tomara que nos conheçamos um dia.
 role: Graduação
 affiliation: Centro de Ciências Exatas e Tecnologias
