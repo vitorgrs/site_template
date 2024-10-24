@@ -5,7 +5,7 @@ layout: manager
 
 <h1 class="tituloForm">Cadastre um novo Membro</h1>
 
-<form id="form_membro" onsubmit="return false">
+<form id="form_membro" onsubmit="return false" enctype="multipart/form-data">
 
     <div id="form_fields">
         <label for="nomeMembro" class="labelName">Nome</label>
@@ -37,6 +37,8 @@ layout: manager
             <input type="text" id="inputLattes" name="id_lattes" required placeholder="Coloque o seu ID aqui">
         </div>
         
+        <label for="imagemMembro" class="labelName">Foto</label>
+        <input type="file" accept="image/*" name="imgMembro" class="inputImage" id="imagemMembro"/>
 
         <label for="emailMembro" class="labelName">E-mail</label>
         <input type="email" name="email_membro" id = "emailMembro" placeholder="Insire seu e-mail aqui">
