@@ -7,9 +7,19 @@ if (formMembro){
     e.preventDefault();
     formData = new FormData(formMembro);
     
+    let objJson = {};
+    
+    for (var [key, value] of formData.entries()) { 
+        console.log(key, value);
+        objJson[key] = value;
+    }
+
     const requestOptions = {
         method: 'POST',
-        body: formData,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(objJson),
     };
 
 
