@@ -12,6 +12,9 @@
   height: auto;
   object-fit: cover;
 }
+.sobrenosimagem img{
+  max-width: 100%;
+}
 
 .linhasdepesquisa{
   display: flex;
